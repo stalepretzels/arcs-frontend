@@ -15,7 +15,7 @@ function joinRoomLogic(rtj) {
 
 function Sidebar() {
   return (
-    <div className="leftSidebar">
+    <div className="container menu">
       <button onClick={()=>window.location = "/edit"} className="menuButton">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -124,4 +124,18 @@ function Sidebar() {
   );
 }
 
-export default Sidebar;
+function Profile(user, bio) {
+  return (
+    <div id="container profile">
+      <div className='titlecon'>
+    <h2>{{user}}</h2>
+    </div>
+
+    <p>Currently in development.</p>
+
+    <a href="/chat"><em>Proceed to chat app.</em></a>
+    </div>
+  );
+}
+
+export {Sidebar, Profile};

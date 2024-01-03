@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Sidebar from './modules/Sidebar.jsx';
+import {Sidebar} from './modules/Sidebar.jsx';
 import {Chat,Intro} from './modules/App.jsx';
 import reportWebVitals from './reportWebVitals';
 import {

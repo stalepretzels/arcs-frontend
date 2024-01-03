@@ -1,4 +1,4 @@
-.leftSidebar {
+.container .menu {
   position: fixed;
   top: 0;
   background: var(--menubg);

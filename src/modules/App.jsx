@@ -32,19 +32,5 @@ function Intro() {
     </div>
   );
 }
-
-function Profile(user, bio) {
-  return (
-    <div id="container main">
-      <div className='titlecon'>
-    <h3>An excellent free chat app.</h3>
-    </div>
-
-    <p>Currently in development.</p>
-
-    <a href="/chat"><em>Proceed to chat app.</em></a>
-    </div>
-  );
-}
             
-export {Chat, Intro, Profile};
+export {Chat, Intro};
