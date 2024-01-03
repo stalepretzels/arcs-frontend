@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import {Sidebar} from './modules/Sidebar.jsx';
+import AppProvider from './Provider.jsx';
 import {Chat,Intro} from './modules/App.jsx';
 import reportWebVitals from './reportWebVitals';
 import {
@@ -35,8 +36,10 @@ root.render(
         >
       </h1>
     </div>
+    <AppProvider>
     <Sidebar />
     <RouterProvider router={router} />
+    </AppProvider>
     </React.StrictMode>
 );
 
