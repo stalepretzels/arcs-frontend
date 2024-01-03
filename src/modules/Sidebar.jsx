@@ -15,7 +15,7 @@ function joinRoomLogic(rtj) {
 
 function Sidebar() {
   return (
-    <div className="container menu">
+    <div className="menuContainer">
       <button onClick={()=>window.location = "/edit"} className="menuButton">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +84,7 @@ function Sidebar() {
       <div id="connected" className="menuButton">
         ☁
       </div>
-      <div className="hr"></div>
+      <div className="menuRule"></div>
       <button className="menuButton" onClick={()=>joinRoomLogic("::GENERAL")}>
         <svg
           xmlns="http://www.w3.org/2000/svg"

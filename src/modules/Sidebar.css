@@ -1,4 +1,4 @@
-.container .menu {
+.menuContainer {
   position: fixed;
   top: 0;
   background: var(--menubg);
@@ -24,7 +24,7 @@
   color: var(--mnubtnclr);
 }
 
-.hr {
+.menuRule {
   background: rgb(150, 150, 150);
   width: calc(100% - 4px);
   height: 3px;
