@@ -1,4 +1,4 @@
-#chatform {
+#chatForm {
   width: 100%;
   display: flex;
   margin-top: 3px;
@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-#chat_input {
+#chatInput {
   background: var(--chtinpbg);
   border: none;
   border-radius: 0.5em;
@@ -17,7 +17,7 @@
   font-family: "Inter Tight", sans-serif;
 }
 
-#chatsubmit, .chatfiles {
+#chatSubmit, .chatFiles {
   min-height: 30px;
   min-width: 30px;
   text-align: center;
@@ -30,7 +30,7 @@
   display: none;
 }
 
-#appendto {
+.chatContainer {
   border: 1px solid var(--apndbrdr);
   width: calc(100% - 10px);
   height: calc(85% - 10%);
@@ -39,6 +39,6 @@
   padding: 1.5px 7px;
 }
 
-.container .main {
+.mainContainer {
   height: 85vh;
 }
