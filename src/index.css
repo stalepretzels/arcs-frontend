@@ -1,0 +1,42 @@
+:root {
+  --txtclr: #000;
+  --bgclr: #FFF;
+  --stclr: #000;
+  --mnubtnclr: black;
+  --chtsubbg: #FFF;
+  --chtinpbg: #ececec;
+  --apndbrdr: black;
+  --menubg: #c6c6c6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  --stclr: #c7c5c5;
+  --bgclr: #323333;
+  --mnubtnclr: #edebeb;
+  --txtclr: whitesmoke;
+  --chtsubbg: #575959;
+  --chtinpbg: #575959;
+  --apndbrdr: white;
+  --menubg: #212121;
+}
+}
+
+html,
+body {
+  padding: 10px;
+  font-family: "Inter Tight", sans-serif;
+  overflow: hidden;
+  margin-left: 30px;
+  background: var(--bgclr);
+  color: var(--txtclr)
+}
+
+textarea {
+  resize: none;
+}
+
+a {
+  text-decoration: wavy underline;
+  color: inherit;
+}

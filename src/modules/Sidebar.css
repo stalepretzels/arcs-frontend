@@ -1,0 +1,38 @@
+.leftSidebar {
+  position: fixed;
+  top: 0;
+  background: var(--menubg);
+  width: 48px;
+  height: 100%;
+  align-items: center;
+  left: 0;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+.menuButton {
+  width: fit-content;
+  height: fit-content;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  color: var(--mnubtnclr);
+}
+
+.hr {
+  background: rgb(150, 150, 150);
+  width: calc(100% - 4px);
+  height: 3px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border-radius: 1em;
+}
+
+#connected {
+  font-size: 32px;
+}
