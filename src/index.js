@@ -18,6 +18,10 @@ const router = createBrowserRouter([
     path: "/chat",
     element: <Chat />,
   },
+  {
+    path: "*", // Catch-all route used for errors
+    element: <p>This page <em>probably</em> doesn't exist. Check back later, or <a href="https://github.com/stalepretzels/arcs-frontend/issues" target="_blank">file an issue</a></p>
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
