@@ -11,6 +11,12 @@ import {About,Rules} from './modules/Extras.jsx'
 import './index.css';
 
 window.onerror = (e, s, l, c, err)=>{window.alert(`An error has occurred! Please report it!\n${s} at ${l}:${c}; ${err}`)}
+console.log = (e)=>window.alert(e)
+console.error = (e)=>window.alert(e)
+console.info = (e)=>window.alert(e)
+console.warn = (e)=>window.alert(e)
+console.trace = (e)=>window.alert(e)
+
 
 const router = createBrowserRouter([
   {
