@@ -114,7 +114,7 @@ class MailboxClass extends MailSystemClass {
   }
 }
 
-const socket = io("https://arcs.is-probably.gay");
+const socket = io("arcs.is-probably.gay");
 const MailSystem = new MailSystemClass();
 const Mailbox = new MailboxClass();
 
