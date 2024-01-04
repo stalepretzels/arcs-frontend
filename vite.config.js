@@ -7,6 +7,6 @@ export default defineConfig({
   server: { port: 3000, },
   define: {
     __APP_VERSION__: JSON.stringify('v1.0.0'),
-    __API_URL__: process.env.SERVER_LOCATION,
+    __SERVER_LOCATION__: JSON.stringify(`${process.env.SERVER_LOCATION}`),
   },
 })
