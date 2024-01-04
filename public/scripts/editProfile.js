@@ -1,6 +1,6 @@
 document
-  .getElementById("userForm")
-  .addEventListener("submit", function (event) {
+  .getElementById("submitButton")
+  .addEventListener("click", function (event) {
     event.preventDefault();
     let username = $("#usernameInput").val();
     let bio = $("#bioInput").val();

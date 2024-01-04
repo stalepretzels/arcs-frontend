@@ -91,7 +91,7 @@ function Edit() {
       <input placeholder='Username...' id="usernameInput" maxlength='20' type="text" required />
       <input placeholder='Bio...' id="bioInput" type="text" />
 
-      <input type="submit" />
+      <input id="submitButton" type="submit" />
     </form>
     </div>
   );
