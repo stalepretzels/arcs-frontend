@@ -10,7 +10,6 @@ import {Chat,Intro,Profile,Edit} from './modules/App.jsx';
 import {About,Rules} from './modules/Extras.jsx'
 import './index.css';
 
-window.alert(__APP_VERSION__)
 window.onerror = (e, s, l, c, err)=>{window.alert(`An error has occurred! Please report it!\n${s} at ${l}:${c}; ${err}`)}
 
 const router = createBrowserRouter([
@@ -52,7 +51,7 @@ root.render(
       <h1>
         Arcs <span style={{fontWeight: 200}}>Slate</span>&nbsp;<span
           style={{fontWeight: 300, fontSize: '15px'}}
-          >v3.0.0-indev15</span
+          >{__APP_VERSION__}</span
         >
       </h1>
     </header>

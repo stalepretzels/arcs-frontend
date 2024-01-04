@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
-var read = require('read-file');
+import read from 'read-file';
 
 // https://vitejs.dev/config/
 export default defineConfig({
