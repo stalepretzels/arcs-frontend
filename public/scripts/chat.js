@@ -116,7 +116,7 @@ if (!document.hasFocus()) {
         }
       }
 
-      const socket = io(process.env.REACT_APP_SERVER_LOCATION);
+      const socket = io(__SERVER_LOCATION__);
       const MailSystem = new MailSystemClass();
       const Mailbox = new MailboxClass();
 
