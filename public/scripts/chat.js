@@ -10,7 +10,7 @@ let notifMuted, loggedIn;
 
       let User;
       if (localStorage.getItem("user") == undefined) {
-        window.location = "/edit";
+        window.location = "/profile/edit";
       } else {
         User = JSON.parse(localStorage.getItem("user"));
       }

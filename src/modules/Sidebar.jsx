@@ -19,7 +19,7 @@ function Sidebar() {
       <ul className="menuList">
         <li>
           <button
-            onClick={() => (window.location = "/edit")}
+            onClick={() => (window.location = "/profile/edit")}
             className="menuButton"
           >
             <svg
