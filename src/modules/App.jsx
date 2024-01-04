@@ -87,7 +87,7 @@ function Edit() {
 
   return (
     <div>
-      <form action="" method="get" id="userForm">
+      <form action="" id="userForm">
       <input placeholder='Username...' id="usernameInput" maxlength='20' type="text" required />
       <input placeholder='Bio...' id="bioInput" type="text" />
 
