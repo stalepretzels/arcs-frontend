@@ -3,7 +3,7 @@ function About() {
     <p>Arcs was made in 2022 by <a target="_blank" href="clover.is-probably.gay">Clover Johnson</a> and was migrated to <a target="_blank" href="github.com/stalepretzels">Stale Pretzels</a> in 2023 for a complete rewrite.</p><br/>
 
 <h3>Changelog:</h3>
-<p>%__APP_CHANGELOG__</p>
+<p>%__APP_CHANGELOG__%</p>
 <h4>Next planned major update: Accounts</h4>
 <br/>
 <a href="/chat"><em>Proceed to chat app.</em></a>

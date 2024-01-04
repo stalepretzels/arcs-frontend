@@ -87,11 +87,11 @@ function Edit() {
 
   return (
     <div>
-      <form action="" class="userform">
+      <form action="" method="get" id="userForm">
       <input placeholder='Username...' id="usernameInput" maxlength='20' type="text" required />
       <input placeholder='Bio...' id="bioInput" type="text" />
 
-      <input type="submit" class="userform" />
+      <input type="submit" />
     </form>
     </div>
   );

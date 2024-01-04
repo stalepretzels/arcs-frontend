@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-          document.querySelector('form').addEventListener("submit", function(event) {
+          document.getElementById('userForm').addEventListener("submit", function(event) {
               event.preventDefault();
               
               let username = $("#usernameInput").val();
