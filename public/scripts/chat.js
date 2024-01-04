@@ -1,5 +1,5 @@
 let notifMuted, loggedIn;
-      let alreadyConnected = false,
+      let alreadyConnected = false
 
       if (localStorage.getItem("notifMuted") == undefined) {
         localStorage.setItem("notifMuted", false);
