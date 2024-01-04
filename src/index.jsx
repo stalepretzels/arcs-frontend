@@ -6,7 +6,8 @@ import {
 } from "react-router-dom";
 
 import {Sidebar} from './modules/Sidebar.jsx';
-import {Chat,Intro,Profile} from './modules/App.jsx';
+import {Chat,Intro,Profile,Edit} from './modules/App.jsx';
+import {About,Rules} from './modules/Extras.jsx'
 import './index.css';
 
 const router = createBrowserRouter([
@@ -25,7 +26,15 @@ const router = createBrowserRouter([
   },
   {
     path: "/profile/edit",
-    element: <Profile />
+    element: <Edit />
+  },
+  {
+    path: "/rules",
+    element: <Rules />
+  },
+  {
+    path: "/about",
+    element: <About />
   },
   {
     path: "*", // Catch-all route used for errors

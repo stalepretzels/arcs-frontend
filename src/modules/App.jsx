@@ -73,11 +73,28 @@ function Profile() {
 }
 
 function Edit() {
+  useEffect(() => {
+    // Execute your script or code here
+    const script = document.createElement('script');
+    script.src = './scripts/editProfile.js';
+    document.body.appendChild(script);
+
+    // Clean up the script when the component is unmounted
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <div>
-      <h1>Edit</h1>
+      <form action="" class="userform">
+      <input placeholder='Username...' id="usernameInput" maxlength='20' type="text" required />
+      <input placeholder='Bio...' id="bioInput" type="text" />
+
+      <input type="submit" class="userform" />
+    </form>
     </div>
   );
 }
             
-export { Chat, Intro, Profile };
+export { Chat, Intro, Profile, Edit };

@@ -1,1 +1,2 @@
-Significantly improved load time and performance.
+Added /profile/edit, /rules, and /about pages.
+Added server to the io function to test messaging.

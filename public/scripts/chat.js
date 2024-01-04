@@ -1,6 +1,5 @@
 let notifMuted, loggedIn;
       let alreadyConnected = false,
-isSlowed = false;
 
       if (localStorage.getItem("notifMuted") == undefined) {
         localStorage.setItem("notifMuted", false);
@@ -117,7 +116,7 @@ if (!document.hasFocus()) {
         }
       }
 
-      const socket = io();
+      const socket = io("https://arcs.is-probably.gay/");
       const MailSystem = new MailSystemClass();
       const Mailbox = new MailboxClass();
 
