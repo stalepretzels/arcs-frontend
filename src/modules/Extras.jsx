@@ -14,18 +14,18 @@ function About() {
 
 function Rules() {
     return <main className="mainContainer">
-        <div style="overflow: scroll; width: 100%; height: 70%;">
-    <h3><span style='font-weight: 200;'><em>Don't spam, please.</em></span></h3>
+        <div style={{overflow: 'scroll', width: '100%', height: '70%'}}>
+    <h3><span style={{fontWeight: 200}}><em>Don't spam, please.</em></span></h3>
     <br/>
-    <h3><span style='font-weight: 200;'><em>No racism, homophobia, and the likes.</em></span></h3>
+    <h3><span style={{fontWeight: 200}}><em>No racism, homophobia, and the likes.</em></span></h3>
     <br/>
-<h3><span style='font-weight: 200;'><em>No explicit content.</em></span></h3>
+<h3><span style={{fontWeight: 200}}><em>No explicit content.</em></span></h3>
     <br/>
-<h3><span style='font-weight: 200;'><em>Keep dedicated talk in dedicated channels.</em></span></h3>
+<h3><span style={{fontWeight: 200}}><em>Keep dedicated talk in dedicated channels.</em></span></h3>
     <br/>
-    <h3><span style='font-weight: 200;'><em>Be kind.</em></span></h3>
+    <h3><span style={{fontWeight: 200}}><em>Be kind.</em></span></h3>
     <br/>
-    <h3><span style='font-weight: 400;'>NOTICE: StalePretzels© retains the right to revoke access at any point in time due to refusal to comply with terms of service or as per request.</span></h3>
+    <h3><span style={{fontWeight: 400}}>NOTICE: StalePretzels© retains the right to revoke access at any point in time due to refusal to comply with terms of service or as per request.</span></h3>
     </div>
     <a onclick='localStorage.setItem("readrules", true);' href='/chat'><em>Proceed to chat app.</em></a>
     </main>
