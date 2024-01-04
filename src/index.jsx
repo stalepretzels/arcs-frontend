@@ -10,7 +10,7 @@ import {Chat,Intro,Profile,Edit} from './modules/App.jsx';
 import {About,Rules} from './modules/Extras.jsx'
 import './index.css';
 
-window.onerror = (e)=>{window.alert(e)}
+window.onerror = (e, s, l, c, err)=>{window.alert(`An error has occurred! Please report it to Clover!\n${s} at ${l}:${c}; ${err}`)}
 
 const router = createBrowserRouter([
   {
