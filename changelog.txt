@@ -1,2 +1,2 @@
-Added dynamic versioning and changelog.
-Fixed the /rules onclick statement.
+Fixed /chat.
+Re-add connect event.

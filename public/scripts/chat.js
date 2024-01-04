@@ -118,6 +118,16 @@ const socket = io("https://callmeclover.serv00.net");
 const MailSystem = new MailSystemClass();
 const Mailbox = new MailboxClass();
 
+socket.on("connect", function (data) {
+  if (!alreadyConnected) {
+    let Mailman = new MailmanClass("join", "", User, room);
+    if (!(User.disName == undefined)) {
+      Mailman.send();
+      alreadyConnected = !alreadyConnected;
+    }
+  }
+});
+
 document.getElementById("chatSubmit").onclick = function (e) {
   e.preventDefault();
 
