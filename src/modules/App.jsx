@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import './App.css';
 
 function Chat() {
+  useEffect(() => {
+    // Execute your script or code here
+    const script = document.createElement('script');
+    script.src = './scripts/chat.js';
+    document.body.appendChild(script);
+
+    // Clean up the script when the component is unmounted
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <main className="mainContainer">
       <MessageContainer />
@@ -56,6 +68,14 @@ function Profile() {
       <a href="/chat">
         <em>Back to chat app.</em>
       </a>
+    </div>
+  );
+}
+
+function Edit() {
+  return (
+    <div>
+      <h1>Edit</h1>
     </div>
   );
 }
