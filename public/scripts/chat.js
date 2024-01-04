@@ -168,6 +168,10 @@ socket.on("notification", function (data) {
   Mailbox.sendNotif(data);
 });
 
+document.arrive("#date", function (element) {
+  element.textContent = new Date(Date.now()).toLocaleString();
+});
+
 function joinRoomLogic(rtj) {
   if (room == rtj) {
     // user is already in room
