@@ -116,7 +116,7 @@ if (!document.hasFocus()) {
         }
       }
 
-      const socket = io(__SERVER_LOCATION__);
+      const socket = io('https://arcs.is-probably.gay');
       const MailSystem = new MailSystemClass();
       const Mailbox = new MailboxClass();
 
