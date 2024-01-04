@@ -10,6 +10,8 @@ import {Chat,Intro,Profile,Edit} from './modules/App.jsx';
 import {About,Rules} from './modules/Extras.jsx'
 import './index.css';
 
+window.onerror = (e)=>{window.alert(e)}
+
 const router = createBrowserRouter([
   {
     path: "/",
