@@ -8,6 +8,7 @@ export default defineConfig({
   server: { port: 3000, },
   define: {
     __APP_VERSION__: JSON.stringify(`${new TextDecoder("utf-8").decode(read.sync('./version.txt'))}`),
+    __APP_CHANGELOG__: JSON.stringify(`${new TextDecoder("utf-8").decode(read.sync('./changelog.txt'))}`),
 //    __SERVER_LOCATION__: JSON.stringify(`${process.env.SERVER_LOCATION}`),
   },
 })
