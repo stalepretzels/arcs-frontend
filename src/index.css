@@ -37,8 +37,22 @@ textarea {
 }
 
 a {
-  text-decoration: wavy underline;
+  text-decoration: underline;
+  transition: color 1.5s;
   color: inherit;
+  cursor: pointer;
+  user-select: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  transition: color 0.5s;
+  color: #1d5ea9;
+}
+
+.statusmsg {
+  font-weight: bold;
+  color: var(--stclr);
 }
 
 /* Animations and transitions */

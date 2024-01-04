@@ -1,0 +1,3 @@
+Swapped to Vite instead of CRA.
+Updated some pages.
+Migrated some things from the old non-split version of Arcs.

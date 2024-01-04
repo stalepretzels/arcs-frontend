@@ -1,0 +1,16 @@
+#message {
+  background: #1d5ea9;
+  color: whitesmoke;
+  padding: 3.5px 5px;
+  border-radius: 0.5em;
+  width: max-content;
+  max-width: calc(100% - 10px);
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+pre {
+  font-family: "Inter Tight", sans-serif;
+  white-space: pre-wrap;
+  margin: 0;
+}

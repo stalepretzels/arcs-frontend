@@ -1,0 +1,3 @@
+Migrate all files from non-split version.
+Migrate all pages from non-split version.
+Migrate and modify all scripts from non-split version.

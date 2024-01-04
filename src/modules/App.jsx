@@ -1,9 +1,12 @@
+import React from 'react';
+import { useParams } from 'react-router-dom';
+
 import './App.css';
 
 function Chat() {
   return (
-    <div className="mainContainer">
-      <div id="appendto" className="chatContainer"></div>
+    <main className="mainContainer">
+      <MessageContainer />
       <div id="chatForm">
         <textarea
           placeholder="This field supports Markdown!! 2000 character limit."
@@ -15,7 +18,13 @@ function Chat() {
 <button className="chatFiles" onClick={() => document.getElementById('selectedFile').click() }>Browse...</button>
         <button id="chatSubmit">&gt;&gt;</button>
       </div>
-    </div>
+    </main>
+  );
+}
+
+function MessageContainer() {
+  return (
+    <div id="appendto" className="chatContainer"></div>
   );
 }
 
@@ -32,5 +41,23 @@ function Intro() {
     </div>
   );
 }
+
+function Profile() {
+  let params = useParams();
+
+  return (
+    <div id="profileContainer">
+      <header className="titleContainer">
+      <h2 id="user" style={{margin:0}}>{ params.user }</h2><br/>
+      <p id="bio" style={{margin:0}}>Bios have been temporarily removed. Sorry!</p><br/>
+      </header>
+
+
+      <a href="/chat">
+        <em>Back to chat app.</em>
+      </a>
+    </div>
+  );
+}
             
-export {Chat, Intro};
+export { Chat, Intro, Profile };

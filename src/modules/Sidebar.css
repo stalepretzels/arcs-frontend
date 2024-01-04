@@ -36,3 +36,17 @@
 #connected {
   font-size: 32px;
 }
+
+.menuList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menuList > ul {
+  padding: 0;
+  margin: 0;
+}
