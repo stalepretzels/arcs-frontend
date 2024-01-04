@@ -1,5 +1,6 @@
 let notifMuted, loggedIn;
 let alreadyConnected = false;
+let room = "::GENERAL";
 
 if (localStorage.getItem("notifMuted") == undefined) {
   localStorage.setItem("notifMuted", false);
