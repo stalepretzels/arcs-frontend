@@ -73,25 +73,30 @@ function Profile() {
 }
 
 function Edit() {
-  useEffect(() => {
-    // Execute your script or code here
-    const script = document.createElement('script');
-    script.src = './scripts/editProfile.js';
-    document.body.appendChild(script);
-
-    // Clean up the script when the component is unmounted
-    return () => {
-      document.body.removeChild(script);
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    let username = $("#usernameInput").val();
+    let bio = $("#bioInput").val();
+    let user = JSON.parse(localStorage.getItem("user")) || {};
+    let uuid = user.uuid || chance.guid();
+    let useridentifier = user.ugn || chance.integer({ min: 1000, max: 9999 });
+    let UserModel = {
+      disName: username,
+      uuid: uuid,
+      ugn: useridentifier,
+      bio: bio,
     };
-  }, []);
+    localStorage.setItem("user", JSON.stringify(UserModel));
+    window.location = "/chat";
+  }
 
   return (
     <div>
-      <form action="" id="userForm">
+      <form onSubmit={(e)=>handleFormSubmit(e)} action="" id="userForm">
       <input placeholder='Username...' id="usernameInput" maxlength='20' type="text" required />
       <input placeholder='Bio...' id="bioInput" type="text" />
 
-      <input id="submitButton" type="submit" />
+      <input type="submit" />
     </form>
     </div>
   );
