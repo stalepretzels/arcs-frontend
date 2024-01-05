@@ -58,6 +58,6 @@ root.render(
     </header>
     <Sidebar />
     <RouterProvider router={router} />
-    <div className="watermark"><p className="statusmsg">Made by <a href="clover.is-probably.gay">Clover Johnson</a>.</p></div>
+    <span className="statusmsg watermark">Made by <a href='https://clover.is-probably.gay' target="_blank" rel="noopener noreferrer">Clover Johnson</a>.</span>
     </React.StrictMode>
 );
