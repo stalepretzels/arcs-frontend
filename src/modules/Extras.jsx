@@ -1,12 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+function transformChangelog(changelog) {
+  // Split the changelog string into individual entries
+  const entries = changelog.split('\n').filter((entry) => entry.trim() !== '');
+  
+  // Transform each entry into an <li> element
+  const transformedEntries = entries.map((entry) => `<li>${entry}</li>`);
+  
+  // Return the array of transformed entries
+  return transformedEntries;
+}
+
 function About() {
     const [data, setData] = useState(null);
 
     useEffect(() => {
         axios.get('https://callmeclover.serv00.net/api/version')
           .then(response => {
+            
             setData(response.data.version);
           })
           .catch(error => {
@@ -21,7 +33,7 @@ function About() {
     <p>Server version: {data ? data : 'Loading data...'}</p>
 
 <h3>Changelog:</h3>
-<p>{__APP_CHANGELOG__}</p>
+<ul>{transformChangelog(__APP_CHANGELOG__)}</ul>
 <h4>Next planned major update: Accounts</h4>
 <br/>
 <a href="/chat"><em>Proceed to chat app.</em></a>
