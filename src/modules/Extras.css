@@ -2,7 +2,7 @@
     font-size: 0.875rem; /* 14px */
     line-height: 1.25rem; /* 20px */
     padding: 2px .5rem; /* 8px*/
-    cursor: pointer;
+    display: inline;
     border: none;
     border-radius: 0.375rem; /* 6px */
     outline: none;
