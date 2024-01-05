@@ -1,2 +1,3 @@
-Fixed /chat.
-Re-add connect event.
+Made some UI nicer.
+Fixed some visual glitches.
+Added some restrictions on the /profile/edit form.

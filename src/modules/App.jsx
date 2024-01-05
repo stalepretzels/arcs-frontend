@@ -1,19 +1,20 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { addDependencyScripts } from "../utility.js";
 
 import './App.css';
 import './Message.css'
 
 function Chat() {
   useEffect(() => {
-    // Execute your script or code here
-    const script = document.createElement('script');
-    script.src = './scripts/chat.js';
-    document.body.appendChild(script);
+    let dependencies = ["./scripts/jquery.min.js", "./scripts/socket.io.min.js", "./scripts/arrive.min.js", "./scripts/chat.js"];
+    let scripts = addDependencyScripts(dependencies);
 
     // Clean up the script when the component is unmounted
     return () => {
-      document.body.removeChild(script);
+      scripts.forEach((script)=>{
+        document.body.removeChild(script);
+      })
     };
   }, []);
 
@@ -74,6 +75,18 @@ function Profile() {
 }
 
 function Edit() {
+  useEffect(() => {
+    let dependencies = ["./scripts/jquery.min.js", "./scripts/jquery.validate.min.js", "./scripts/chance.min.js"];
+    let scripts = addDependencyScripts(dependencies);
+
+    // Clean up the script when the component is unmounted
+    return () => {
+      scripts.forEach((script)=>{
+        document.body.removeChild(script);
+      })
+    };
+  }, []);
+
   function handleFormSubmit(event) {
     event.preventDefault();
     let username = $("#usernameInput").val();

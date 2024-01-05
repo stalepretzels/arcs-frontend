@@ -1,5 +1,5 @@
 #message {
-  background: #1d5ea9;
+  background: var(--accent);
   color: whitesmoke;
   padding: 3.5px 5px;
   border-radius: 0.5em;
