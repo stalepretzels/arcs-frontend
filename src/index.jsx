@@ -58,5 +58,6 @@ root.render(
     </header>
     <Sidebar />
     <RouterProvider router={router} />
+    <p className="statusmsg">Made by <a href="clover.is-probably.gay">Clover Johnson</a>.</p>
     </React.StrictMode>
 );
