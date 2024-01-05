@@ -1,3 +1,3 @@
-Made some UI nicer.
-Fixed some visual glitches.
-Added some restrictions on the /profile/edit form.
+Made some UI nicer.;
+Fixed some visual glitches.;
+Added some restrictions on the /profile/edit form.;

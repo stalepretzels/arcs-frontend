@@ -3,7 +3,7 @@ import axios from 'axios';
 
 function transformChangelog(changelog) {
   // Split the changelog string into individual entries
-  const entries = changelog.split('\n').filter((entry) => entry.trim() !== '');
+  const entries = changelog.split(';').filter((entry) => entry.trim() !== '');
   
   // Transform each entry into an <li> element
   const transformedEntries = entries.map((entry) => `<li>${entry}</li>`);
