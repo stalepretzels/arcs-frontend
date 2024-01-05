@@ -5,7 +5,7 @@ function transformChangelog(changelog) {
   let replacedChangelog = changelog.replace(/\[removed\]|\[scrapped\]/g, '<div class="changelogBadge red">Removed/Scrapped</div>').replace(/\[being added\]|\[added\]/g, '<div class="changelogBadge green">Being Added/Added</div>').replace(/\[unstable\]|\[labs content\]/g, '<div class="changelogBadge yellow">Unstable/Labs</div>');
 
   // Split the changelog string into individual entries
-  const entries = changelog.split(';').filter((entry) => entry.trim() !== '');
+  const entries = replacedChangelog.split(';').filter((entry) => entry.trim() !== '');
   
   // Transform each entry into an <li> element
   const transformedEntries = entries.map((entry) => `<li>${entry}</li>`);
