@@ -7,7 +7,7 @@ function About() {
     useEffect(() => {
         axios.get('https://callmeclover.serv00.net/api/version')
           .then(response => {
-            setData(response.data);
+            setData(response.data.version);
           })
           .catch(error => {
             console.error('Error fetching data:', error);
