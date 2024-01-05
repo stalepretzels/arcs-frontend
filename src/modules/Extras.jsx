@@ -17,6 +17,7 @@ function About() {
 
     useEffect(() => {
       document.getElementById('changelog').innerHTML = transformChangelog(__APP_CHANGELOG__)
+      window.alert(transformChangelog(__APP_CHANGELOG__))
         axios.get('https://callmeclover.serv00.net/api/version')
           .then(response => {
             
