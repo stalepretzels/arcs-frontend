@@ -64,6 +64,8 @@ a:hover {
   bottom: 10px;
   width: 100%;
   text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 /* Animations and transitions */
