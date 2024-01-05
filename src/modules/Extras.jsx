@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import './Extras.css';
 
 function transformChangelog(changelog) {
   let replacedChangelog = changelog.replace(/\[removed\]|\[scrapped\]/g, '<div class="changelogBadge red">Removed/Scrapped</div>').replace(/\[being added\]|\[added\]/g, '<div class="changelogBadge green">Being Added/Added</div>').replace(/\[unstable\]|\[labs content\]/g, '<div class="changelogBadge yellow">Unstable/Labs</div>');
