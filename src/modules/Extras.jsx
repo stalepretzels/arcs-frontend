@@ -1,6 +1,24 @@
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+
 function About() {
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        axios.get('https://callmeclover.serv00.net/api/version')
+          .then(response => {
+            setData(response.data);
+          })
+          .catch(error => {
+            console.error('Error fetching data:', error);
+          });
+      }, []);
+    
     return <main className="mainContainer">
     <p>Arcs was made in 2022 by <a target="_blank" href="clover.is-probably.gay">Clover Johnson</a> and was migrated to <a target="_blank" href="github.com/stalepretzels">Stale Pretzels</a> in 2023 for a complete rewrite.</p><br/>
+
+    <p>Client version: {__APP_VERSION__}</p>
+    <p>Server version: {data ? data : 'Loading data...'}</p>
 
 <h3>Changelog:</h3>
 <p>{__APP_CHANGELOG__}</p>
