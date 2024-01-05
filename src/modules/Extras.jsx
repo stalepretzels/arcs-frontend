@@ -16,6 +16,7 @@ function About() {
     const [data, setData] = useState(null);
 
     useEffect(() => {
+      document.getElementById('changelog').innerHTML = transformChangelog(__APP_CHANGELOG__)
         axios.get('https://callmeclover.serv00.net/api/version')
           .then(response => {
             
@@ -33,7 +34,7 @@ function About() {
     <p>Server version: {data ? data : 'Loading data...'}</p>
 
 <h3>Changelog:</h3>
-<ul>{transformChangelog(__APP_CHANGELOG__)}</ul>
+<ul id="changelog"></ul>
 <h4>Next planned major update: Accounts</h4>
 <br/>
 <a href="/chat"><em>Proceed to chat app.</em></a>
