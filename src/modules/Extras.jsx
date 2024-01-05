@@ -9,15 +9,14 @@ function transformChangelog(changelog) {
   const transformedEntries = entries.map((entry) => `<li>${entry}</li>`);
   
   // Return the array of transformed entries
-  return transformedEntries;
+  return transformedEntries.join('');
 }
 
 function About() {
     const [data, setData] = useState(null);
 
     useEffect(() => {
-      document.getElementById('changelog').innerHTML = transformChangelog(__APP_CHANGELOG__)
-      window.alert(typeof transformChangelog(__APP_CHANGELOG__))
+      document.getElementById('changelog').innerHTML = transformChangelog(__APP_CHANGELOG__);
         axios.get('https://callmeclover.serv00.net/api/version')
           .then(response => {
             
