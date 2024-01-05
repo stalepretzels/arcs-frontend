@@ -19,4 +19,5 @@ pre {
   display: flex;
   justify-content: center;
   width: fit-content;
+  margin-bottom: 2px;
 }
