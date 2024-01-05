@@ -59,6 +59,13 @@ a:hover {
   color: var(--stclr);
 }
 
+.watermark {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
 /* Animations and transitions */
 .slide-in-right {
   transition: transform 0.5s ease-in-out;
