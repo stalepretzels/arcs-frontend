@@ -1,3 +1,2 @@
-Made some UI nicer.;
-Fixed some visual glitches.;
-Added some restrictions on the /profile/edit form.;
+Added badges to changelog. [added];
+Removed message chaining temporarily. [removed] [labs content];
