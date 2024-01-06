@@ -22,6 +22,7 @@ pre {
   margin-bottom: 4px;
 }
 
-.msgPfp {
+.userDisplay > svg {
   margin-right: 4px;
+  border-radius: 20px;
 }
