@@ -7,7 +7,7 @@ import './Message.css'
 
 function Chat() {
   useEffect(() => {
-    let dependencies = ["./scripts/jquery.min.js", "./scripts/socket.io.min.js", "./scripts/arrive.min.js", "./scripts/chat.js"];
+    let dependencies = ["./scripts/chat.js"];
     let scripts = addDependencyScripts(dependencies);
 
     // Clean up the script when the component is unmounted
@@ -76,7 +76,7 @@ function Profile() {
 
 function Edit() {
   useEffect(() => {
-    let dependencies = ["./scripts/jquery.min.js", "./scripts/jquery.validate.min.js", "./scripts/chance.min.js"];
+    let dependencies = ["./scripts/jquery.validate.min.js"];
     let scripts = addDependencyScripts(dependencies);
 
     // Clean up the script when the component is unmounted
