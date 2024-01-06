@@ -7,7 +7,7 @@ import './Message.css'
 
 function Chat() {
   useEffect(() => {
-    let dependencies = ["./scripts/jquery.min.js", "./scripts/socket.io.min.js", "./scripts/arrive.min.js", "./scripts/chat.js"];
+    let dependencies = ["./scripts/jquery.min.js", "./scripts/socket.io.min.js", "./scripts/arrive.min.js", "./scripts/chat.js", "./scripts/jdenticon.min.js"];
     let scripts = addDependencyScripts(dependencies);
 
     // Clean up the script when the component is unmounted
