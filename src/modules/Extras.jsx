@@ -30,7 +30,7 @@ function About() {
           });
       }, []);
     
-    return <main className="mainContainer">
+    return <>
     <p>Arcs was made in 2022 by <a target="_blank" href="clover.is-probably.gay">Clover Johnson</a> and was migrated to <a target="_blank" href="github.com/stalepretzels">Stale Pretzels</a> in 2023 for a complete rewrite.</p><br/>
 
     <p>Client version: {__APP_VERSION__}</p>
@@ -41,11 +41,11 @@ function About() {
 <h4>Next planned major update: Accounts</h4>
 <br/>
 <a href="/chat"><em>Proceed to chat app.</em></a>
-</main>
+</>
 }
 
 function Rules() {
-    return <main className="mainContainer">
+    return <>
         <div style={{overflow: 'scroll', width: '100%', height: '70%'}}>
             <ul>
     <li><h3><span style={{fontWeight: 200}}><em>Don't spam, please.</em></span></h3></li>
@@ -56,7 +56,7 @@ function Rules() {
     <li><h3><span style={{fontWeight: 400}}>NOTICE: StalePretzels© retains the right to revoke access at any point in time due to refusal to comply with terms of service or as per request.</span></h3></li>
     </ul></div>
     <a onClick={()=>localStorage.setItem("readrules", true)} href='/chat'><em>Proceed to chat app.</em></a>
-    </main>
+    </>
 }
 
 export {Rules, About};
