@@ -6,6 +6,18 @@ import './App.css';
 import './Message.css'
 
 function Chat() {
+  useEffect(() => {
+    let dependencies = ["./scripts/chat.js"];
+    let scripts = addDependencyScripts(dependencies);
+
+    // Clean up the script when the component is unmounted
+    return () => {
+      scripts.forEach((script)=>{
+        document.body.removeChild(script);
+      })
+    };
+  }, []);
+
   return (
     <>
       <MessageContainer />
