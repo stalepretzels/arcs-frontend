@@ -6,20 +6,8 @@ import './App.css';
 import './Message.css'
 
 function Chat() {
-  useEffect(() => {
-    let dependencies = ["./scripts/chat.js"];
-    let scripts = addDependencyScripts(dependencies);
-
-    // Clean up the script when the component is unmounted
-    return () => {
-      scripts.forEach((script)=>{
-        document.body.removeChild(script);
-      })
-    };
-  }, []);
-
   return (
-    <main className="mainContainer">
+    <>
       <MessageContainer />
       <div id="chatForm">
         <textarea
@@ -32,7 +20,7 @@ function Chat() {
 <button className="chatFiles" onClick={() => document.getElementById('selectedFile').click() }>Browse...</button>
         <button id="chatSubmit">&gt;&gt;</button>
       </div>
-    </main>
+    </>
   );
 }
 
@@ -44,15 +32,15 @@ function MessageContainer() {
 
 function Intro() {
   return (
-    <div>
-      <div className='titlecon'>
+    <>
+      <div className='titleContainer'>
     <h3>An excellent free chat app.</h3>
     </div>
 
     <p>Currently in development.</p>
 
     <a href="/chat"><em>Proceed to chat app.</em></a>
-    </div>
+    </>
   );
 }
 
@@ -60,7 +48,7 @@ function Profile() {
   let params = useParams();
 
   return (
-    <div id="profileContainer">
+    <>
       <header className="titleContainer">
       <h2 id="user" style={{margin:0}}>{ params.user }</h2><br/>
       <p id="bio" style={{margin:0}}>Bios have been temporarily removed. Sorry!</p><br/>
@@ -70,7 +58,7 @@ function Profile() {
       <a href="/chat">
         <em>Back to chat app.</em>
       </a>
-    </div>
+    </>
   );
 }
 
@@ -105,14 +93,14 @@ function Edit() {
   }
 
   return (
-    <div>
+    <>
       <form onSubmit={(e)=>handleFormSubmit(e)} action="" id="userForm">
       <input placeholder='Username...' id="usernameInput" maxlength='20' type="text" required />
       <input placeholder='Bio...' id="bioInput" type="text" />
 
       <input type="submit" />
     </form>
-    </div>
+    </>
   );
 }
             
