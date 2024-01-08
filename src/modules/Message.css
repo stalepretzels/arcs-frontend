@@ -22,6 +22,10 @@ pre {
   margin-bottom: 4px;
 }
 
+.emoji {
+  height: 1.2em;
+}
+
 .userDisplay > svg {
   margin-right: 4px;
   border-radius: 20px;
