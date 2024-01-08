@@ -54,29 +54,6 @@ const router = createBrowserRouter([
   },
 ]);
 
-const dependencies = createBrowserRouter([
-  {
-    path: "/chat",
-    element: (
-      <>
-        <script src="/scripts/jquery.min.js"></script>
-        <script src="/scripts/socket.io.min.js"></script>
-        <script src="/scripts/arrive.min.js"></script>
-        <script src="/scripts/chat.js"></script>
-      </>
-    ),
-  },
-  {
-    path: "/profile/edit",
-    element: (
-      <>
-        <script src="./scripts/jquery.min.js"></script>
-        <script src="./scripts/jquery.validate.min.js"></script>
-      </>
-    ),
-  },
-]);
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -105,6 +82,5 @@ root.render(
         .
       </footer>
     </main>
-    <RouterProvider router={dependencies} />
   </React.StrictMode>
 );
