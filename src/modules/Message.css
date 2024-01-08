@@ -26,3 +26,7 @@ pre {
   margin-right: 4px;
   border-radius: 20px;
 }
+
+.userDisplay > time {
+  font-size: small;
+}
