@@ -33,7 +33,7 @@ class MailmanClass extends MailSystemClass {
 
         this.pkg = {
           message: this.message,
-          date: Date.now(),
+          date: new Date(Date.now()),
           room: this.room,
           user: user,
           //attachment: attachment
