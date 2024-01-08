@@ -27,6 +27,6 @@ pre {
   border-radius: 20px;
 }
 
-.userDisplay > time {
+.msgTime {
   font-size: small;
 }
