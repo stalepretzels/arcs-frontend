@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Sidebar } from "./modules/Sidebar.jsx";
 import { Chat, Intro, Profile, Edit } from "./modules/App.jsx";
 import { About, Rules } from "./modules/Extras.jsx";
+import { ErrorComp } from "./modules/Error.jsx"
 import "./index.css";
 
 window.onerror = (e, s, l, c, err) => {
@@ -12,6 +13,10 @@ window.onerror = (e, s, l, c, err) => {
 };
 
 const router = createBrowserRouter([
+  {
+    path: "*",
+    element: <ErrorComp />
+  },
   {
     path: "/",
     element: <Intro />,
