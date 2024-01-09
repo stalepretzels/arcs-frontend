@@ -14,10 +14,6 @@ window.onerror = (e, s, l, c, err) => {
 
 const router = createBrowserRouter([
   {
-    path: "*",
-    element: <ErrorComp />
-  },
-  /*{
     path: "/",
     element: <Intro />,
   },
@@ -56,7 +52,7 @@ const router = createBrowserRouter([
         </a>
       </p>
     ),
-  },*/
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
