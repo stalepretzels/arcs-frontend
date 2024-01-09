@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import { Sidebar } from "./modules/Sidebar.jsx";
 import { Chat, Intro, Profile, Edit } from "./modules/App.jsx";
-import { About, Rules } from "./modules/Extras.jsx";
+import { About, Rules, ChangelogAbout } from "./modules/Extras.jsx";
 import { ErrorComp } from "./modules/Error.jsx"
 import "./index.css";
 
@@ -37,6 +37,10 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <About />,
+  },
+  {
+    path: "/about/chnlogfaq",
+    element: <ChangelogAbout />
   },
   {
     path: "*", // Catch-all route used for errors

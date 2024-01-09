@@ -1,3 +1,3 @@
-Removed message chaining temporarily. [removed] [labs content];
-Removed loading dependencies dynamically. [scrapped];
-Made some things have more semantic HTML. [added];
+Added some more styling. [added];
+Prepare to make/add custom design system. [being added];
+Prepare to make a canary version of Arcs. [being added] [unstable];
