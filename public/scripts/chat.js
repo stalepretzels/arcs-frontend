@@ -110,10 +110,11 @@ class MailboxClass extends MailSystemClass {
 const socket = io("https://callmeclover.serv00.net");
 const MailSystem = new MailSystemClass();
 const Mailbox = new MailboxClass();
+let Mailman;
 
 socket.on("connect", function (data) {
   if (!alreadyConnected) {
-    let Mailman = new MailmanClass("join", "", User, room);
+    Mailman = new MailmanClass("join", "", User, room);
     if (!(User.disName == undefined)) {
       Mailman.send();
       alreadyConnected = !alreadyConnected;
@@ -131,7 +132,7 @@ document.getElementById("chatSubmit").onclick = function (e) {
   } else {
     document.getElementById("chatInput").value = "";
 
-    let Mailman = new MailmanClass("message", message, User, room);
+    Mailman = new MailmanClass("message", message, User, room);
     Mailman.send();
   }
 };
@@ -147,7 +148,7 @@ $("#chatInput").keypress(function (e) {
     } else {
       document.getElementById("chatInput").value = "";
 
-      let Mailman = new MailmanClass("message", message, User, room);
+      Mailman = new MailmanClass("message", message, User, room);
       Mailman.send();
     }
   }
@@ -165,7 +166,7 @@ function joinRoomLogic(rtj) {
   if (room == rtj) {
     // user is already in room
   } else {
-    let Mailman = new MailmanClass("join", room, User, rtj);
+    Mailman = new MailmanClass("join", room, User, rtj);
     Mailman.send();
     room = rtj;
   }

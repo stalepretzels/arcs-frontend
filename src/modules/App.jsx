@@ -75,18 +75,6 @@ function Profile() {
 }
 
 function Edit() {
-  useEffect(() => {
-    let dependencies = ["./scripts/jquery.validate.min.js"];
-    let scripts = addDependencyScripts(dependencies);
-
-    // Clean up the script when the component is unmounted
-    return () => {
-      scripts.forEach((script)=>{
-        document.body.removeChild(script);
-      })
-    };
-  }, []);
-
   function handleFormSubmit(event) {
     event.preventDefault();
     let username = $("#usernameInput").val();

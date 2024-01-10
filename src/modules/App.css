@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   margin-top: 3px;
-  gap: 3px;
+  gap: 5px;
   align-items: center;
 }
 
@@ -11,15 +11,16 @@
   border: none;
   border-radius: 0.5em;
   width: calc(100% - 33px);
-  margin-right: 3px;
-  height: 40px;
+  min-height: 40px;
   color: var(--txtclr);
   font-family: "Inter Tight", sans-serif;
 }
 
+*:focus {
+  outline: var(--accent) solid 2px;
+}
+
 #chatSubmit, .chatFiles {
-  min-height: 30px;
-  min-width: 30px;
   text-align: center;
   cursor: pointer;
   color: var(--txtclr);
