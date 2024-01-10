@@ -20,7 +20,7 @@ export function IconButton({ onClick, children, size, icon, type, color }) {
 export function MenuIconButton({ onClick, size, icon }) {
   return (
     <button className="menuIconButton" onClick={onClick}>
-      <box-icon type='solid' name='user-account'></box-icon>
+      <i className='bx bxs-user-account'></i>
     </button>
   );
 }
