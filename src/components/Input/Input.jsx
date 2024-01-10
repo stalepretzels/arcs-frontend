@@ -17,10 +17,10 @@ export function IconButton({ onClick, children, size, icon, type, color }) {
   );
 }
 
-export function MenuIconButton({ onClick, children, size, icon }) {
+export function MenuIconButton({ onClick, size, icon }) {
   return (
     <button className="menuIconButton" onClick={onClick}>
-      <i className={icon} style={{fontSize: size}}>{children}</i>
+      <box-icon type='solid' name='user-account'></box-icon>
     </button>
   );
 }
