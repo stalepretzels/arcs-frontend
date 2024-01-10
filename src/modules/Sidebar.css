@@ -4,7 +4,6 @@
   background: var(--menubg);
   width: 48px;
   height: 100%;
-  align-items: center;
   left: 0;
   border-top-right-radius: 1em;
   border-bottom-right-radius: 1em;
@@ -39,6 +38,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+  text-wrap: nowrap;
 }
 
 .menuList > ul > li{
