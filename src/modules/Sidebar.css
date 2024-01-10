@@ -15,7 +15,7 @@
 }
 
 .expanded {
-  width: 128px !important;
+  width: 172px !important;
 }
 
 .menuRule {
@@ -46,4 +46,8 @@
 .menuList > ul > li{
   display: flex;
   align-content: center;
+}
+
+.menuList>ul>li>button>ion-icon {
+  margin-right: 5px;
 }
