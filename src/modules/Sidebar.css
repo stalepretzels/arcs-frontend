@@ -17,6 +17,9 @@
 .expanded {
   width: 172px !important;
 }
+.expanded::backdrop {
+  background-color: rgba(0,0,0,0.5);
+}
 
 .menuRule {
   background: rgb(150, 150, 150);
@@ -43,11 +46,11 @@
   text-wrap: nowrap;
 }
 
-.menuList > ul > li{
+.menuList > li{
   display: flex;
   align-content: center;
 }
 
-.menuList>ul>li>button>ion-icon {
+.menuList>li>button>ion-icon {
   margin-right: 5px;
 }
