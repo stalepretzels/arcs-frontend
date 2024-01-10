@@ -30,8 +30,8 @@ function Chat() {
           maxLength="2000"
         ></textarea>
 <input type="file" id="selectedFile" accept="image/*" />
-<IconButton classes="chatFiles" icon="folder" onClick={() => document.getElementById('selectedFile').click() }>Browse...</IconButton>
-        <IconButton id="chatSubmit" icon="send"></IconButton>
+<IconButton classes="chatFiles button" icon="folder" onClick={() => document.getElementById('selectedFile').click() }>Browse...</IconButton>
+        <IconButton id="chatSubmit button" icon="send"></IconButton>
       </div>
     </>
   );
