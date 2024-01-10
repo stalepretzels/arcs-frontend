@@ -31,7 +31,7 @@ function Chat() {
         ></textarea>
 <input type="file" id="selectedFile" accept="image/*" />
 <IconButton size="16px" classes="chatFiles button" icon="folder" onClick={() => document.getElementById('selectedFile').click() }>Browse...</IconButton>
-        <IconButton id="chatSubmit" classes="button" icon="send"></IconButton>
+        <IconButton id="chatSubmit" classes="button" size="16px" icon="send"></IconButton>
       </div>
     </>
   );
