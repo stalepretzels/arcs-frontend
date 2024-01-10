@@ -17,9 +17,29 @@
 .expanded {
   width: 172px !important;
 }
-.expanded::backdrop {
-  background-color: rgba(0,0,0,0.5);
+
+body::after {
+  background-color: rgba(0,0,0,0);
+  transition: background-color 0.5s ease-in-out;
 }
+body.vignette::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: bg-anim-color 0.5s ease-in-out;
+  z-index: -1;
+}
+
+@keyframes bg-anim-color {
+  100% {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
 
 .menuRule {
   background: rgb(150, 150, 150);

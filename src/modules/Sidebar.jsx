@@ -44,6 +44,7 @@ function Sidebar() {
   function handleSidebarExpand() {
     const menuContainer = document.querySelector('.menuContainer');
   menuContainer.classList.toggle('expanded');
+  document.body.classList.toggle('vignette');
   }
 
   return (
