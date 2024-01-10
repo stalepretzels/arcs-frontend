@@ -1,4 +1,6 @@
-import './Input.css'
+import './Input.css';
+import 'boxicons';
+import '../../boxicons.min.css';
 
 export function Button({ onClick, children }) {
   return (
@@ -19,7 +21,7 @@ export function IconButton({ onClick, children, size, icon, type, color }) {
 export function MenuIconButton({ onClick, children, size, icon, type, color }) {
   return (
     <button className="menuIconButton" onClick={onClick}>
-      <box-icon name={icon} type={type} size={`${size}px`} color={color}>{children}</box-icon>
+      <box-icon name={icon} type={type} size={size} color={color}>{children}</box-icon>
     </button>
   );
 }
