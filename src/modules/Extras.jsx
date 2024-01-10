@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./Extras.css";
+import './Extras.css'
 
 function transformChangelog(changelog) {
   let replacedChangelog = changelog

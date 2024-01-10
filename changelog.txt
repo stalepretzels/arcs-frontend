@@ -1,3 +1,1 @@
-Added some more styling. [added];
-Prepare to make/add custom design system. [being added];
-Prepare to make a canary version of Arcs. [being added] [unstable];
+Start implementing design system. [being added] [experimental];
