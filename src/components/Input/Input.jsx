@@ -16,9 +16,9 @@ export function IconButton({ onClick, children, size, icon, type, color }) {
   );
 }
 
-export function MenuIconButton({ onClick, size, icon }) {
+export function MenuIconButton({ onClick, size, icon, id }) {
   return (
-    <button className="menuIconButton" onClick={onClick}>
+    <button id={id} className="menuIconButton" onClick={onClick}>
       <ion-icon name={icon} style={{fontSize: size}}></ion-icon>
     </button>
   );
