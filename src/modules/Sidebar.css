@@ -11,6 +11,12 @@
   display: flex;
   flex-direction: column;
   padding: 10px 0;
+  overflow: hidden;
+  transition: width 0.5s ease-in-out;
+}
+
+.expanded {
+  width: 128px !important;
 }
 
 .menuRule {
@@ -35,7 +41,7 @@
   align-items: center;
 }
 
-.menuList > ul {
-  padding: 0;
-  margin: 0;
+.menuList > ul > li{
+  display: flex;
+  align-items: center;
 }

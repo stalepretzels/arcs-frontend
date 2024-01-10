@@ -1,2 +1,3 @@
 Start implementing design system. [being added] [experimental];
 Use Ionicons instead of SVGs or boxicons. [added];
+Make sidebar expand on menu button click. [added];

@@ -41,22 +41,35 @@ function Sidebar() {
     }
   }
 
+  function handleSidebarExpand() {
+    const menuContainer = document.querySelector('.menuContainer');
+  menuContainer.classList.toggle('expanded');
+  }
+
   return (
     <nav className="menuContainer">
       <ul className="menuList">
+      <li>
+          <MenuIconButton
+            onClick={handleSidebarExpand}
+            icon="menu"
+            id="menuExpandBtn"
+            size="32px"
+          ></MenuIconButton>
+        </li>
         <li>
           <MenuIconButton
             onClick={() => (window.location = "/profile/edit")}
             icon="person-circle"
             size="32px"
-          ></MenuIconButton>
+          ></MenuIconButton>Edit profile
         </li>
         <li>
           <MenuIconButton
             onClick={() => window.open("https://github.com/stalepretzels/arcs")}
             icon="logo-github"
             size="32px"
-          ></MenuIconButton>
+          ></MenuIconButton>Github
         </li>
         <li>
           <MenuIconButton
@@ -64,21 +77,21 @@ function Sidebar() {
             onClick={handleNotificationButton}
             icon="notifications"
             size="32px"
-          ></MenuIconButton>
+          ></MenuIconButton>Notifications
         </li>
         <li>
           <MenuIconButton
             onClick={() => (window.location = "/rules")}
             icon="book"
             size="32px"
-          ></MenuIconButton>
+          ></MenuIconButton>Rules
         </li>
         <li>
           <MenuIconButton
             onClick={() => (window.location = "/about")}
             icon="information-circle"
             size="32px"
-          ></MenuIconButton>
+          ></MenuIconButton>About
         </li>
         <li>
           <div id="connected" className="menuButton">
