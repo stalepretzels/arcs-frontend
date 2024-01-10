@@ -1,17 +1,17 @@
 import './Input.css';
 
-export function Button({ onClick, children }) {
+export function Button({ onClick, children, classes, id }) {
   return (
-    <button className="button" onClick={onClick}>
+    <button id={id} className={`button ${classes}`} onClick={onClick}>
       {children}
     </button>
   );
 }
 
-export function IconButton({ onClick, children, size, icon, type, color }) {
+export function IconButton({ onClick, size, icon, classes, id }) {
   return (
-    <button className="iconButton" onClick={onClick}>
-      <box-icon name={icon} type={type} size={`${size}px`} color={color}>{children}</box-icon>
+    <button id={id} className={`iconButton ${classes}`} onClick={onClick}>
+      <ion-icon name={icon} style={{fontSize: size}}></ion-icon>
     </button>
   );
 }

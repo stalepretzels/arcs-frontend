@@ -17,6 +17,10 @@
 
 .iconButton {}
 
+.iconButton>ion-icon {
+    color: var(--txtclr);
+}
+
 .menuIconButton {
     width: fit-content;
     height: fit-content;

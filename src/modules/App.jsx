@@ -3,7 +3,8 @@ import { useParams } from 'react-router-dom';
 import { addDependencyScripts } from "../utility.js";
 
 import './App.css';
-import './Message.css'
+import './Message.css';
+import {IconButton} from  '../components/Input/Input.jsx';
 
 function Chat() {
   useEffect(() => {
@@ -29,8 +30,8 @@ function Chat() {
           maxLength="2000"
         ></textarea>
 <input type="file" id="selectedFile" accept="image/*" />
-<button className="chatFiles" onClick={() => document.getElementById('selectedFile').click() }>Browse...</button>
-        <button id="chatSubmit">&gt;&gt;</button>
+<IconButton classes="chatFiles" icon="folder" onClick={() => document.getElementById('selectedFile').click() }>Browse...</IconButton>
+        <IconButton id="chatSubmit" icon="send"></IconButton>
       </div>
     </>
   );
