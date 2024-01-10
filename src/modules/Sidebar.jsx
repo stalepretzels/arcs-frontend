@@ -42,7 +42,7 @@ function Sidebar() {
     <nav className="menuContainer">
       <ul className="menuList">
         <li>
-          <MenuIconButton onClick={() => (window.location = "/profile/edit")} name="user-account" size="32" type="solid" color=""></IconButton>
+          <MenuIconButton onClick={() => (window.location = "/profile/edit")} name="user-account" size="32" type="solid" color=""></MenuIconButton>
         </li>
         <li>
           <button
