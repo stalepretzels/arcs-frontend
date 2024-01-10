@@ -15,6 +15,14 @@ function joinRoomLogic(rtj) {
 }
 
 function Sidebar() {
+  document.onclick = function(event) {
+    if (event.target.classList.contains('vignette')) {
+      const menuContainer = document.querySelector('.menuContainer');
+      menuContainer.classList.toggle('expanded');
+      document.body.classList.toggle('vignette');
+        }
+  };
+  
   function handleNotificationButton() {
     if (Notification.permission === "denied") {
       /* nothing */
