@@ -1,6 +1,5 @@
 import './Input.css';
 import 'boxicons';
-import '../../boxicons.min.css';
 
 export function Button({ onClick, children }) {
   return (
