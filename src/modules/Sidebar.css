@@ -46,11 +46,6 @@
   text-wrap: nowrap;
 }
 
-.menuList > li{
-  display: flex;
-  align-content: center;
-}
-
 .menuList>li>button>ion-icon {
   margin-right: 5px;
 }
