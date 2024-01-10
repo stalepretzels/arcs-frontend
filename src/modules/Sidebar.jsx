@@ -1,5 +1,5 @@
 import "./Sidebar.css";
-import {IconButton} from '../components/Input/Input.jsx';
+import {MenuIconButton} from '../components/Input/Input.jsx';
 
 let notifMuted = localStorage.getItem("notifMuted") || true,
   room = "::GENERAL";
@@ -42,7 +42,7 @@ function Sidebar() {
     <nav className="menuContainer">
       <ul className="menuList">
         <li>
-          <IconButton onClick={() => (window.location = "/profile/edit")} name="user-account" size="32" type="solid"></IconButton>
+          <MenuIconButton onClick={() => (window.location = "/profile/edit")} name="user-account" size="32" type="solid" color=""></IconButton>
         </li>
         <li>
           <button

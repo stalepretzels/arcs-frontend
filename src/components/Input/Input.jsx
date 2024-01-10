@@ -8,10 +8,18 @@ export function Button({ onClick, children }) {
   );
 }
 
-export function IconButton({ onClick, children, size, icon, type }) {
+export function IconButton({ onClick, children, size, icon, type, color }) {
   return (
-    <button className="iconbutton" onClick={onClick}>
-      <box-icon name={icon} type={type} size={`${size}px`}>{children}</box-icon>
+    <button className="iconButton" onClick={onClick}>
+      <box-icon name={icon} type={type} size={`${size}px`} color={color}>{children}</box-icon>
+    </button>
+  );
+}
+
+export function MenuIconButton({ onClick, children, size, icon, type, color }) {
+  return (
+    <button className="menuIconButton" onClick={onClick}>
+      <box-icon name={icon} type={type} size={`${size}px`} color={color}>{children}</box-icon>
     </button>
   );
 }
