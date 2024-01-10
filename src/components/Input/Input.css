@@ -10,5 +10,8 @@
     cursor: pointer;
     margin-top: 4px;
     margin-bottom: 4px;
+}
+
+.menuIconButton>ion-icon {
     color: var(--mnubtnclr);
-  }
+}

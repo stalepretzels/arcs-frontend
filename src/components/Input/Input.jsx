@@ -1,5 +1,4 @@
 import './Input.css';
-import 'boxicons';
 
 export function Button({ onClick, children }) {
   return (
@@ -20,7 +19,7 @@ export function IconButton({ onClick, children, size, icon, type, color }) {
 export function MenuIconButton({ onClick, size, icon }) {
   return (
     <button className="menuIconButton" onClick={onClick}>
-      <i className='bx bxs-user-account'></i>
+      <ion-icon name={icon} style={{fontSize: size}}></ion-icon>
     </button>
   );
 }
