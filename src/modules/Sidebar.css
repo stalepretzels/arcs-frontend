@@ -28,7 +28,9 @@ body::after {
   background-color: rgba(0, 0, 0, 0);
   transition: background-color 0.5s ease-in-out;
   z-index: -1;
+  pointer-events: none;
 }
+
 body.vignette::after {
   content: "";
   position: fixed;
@@ -38,7 +40,8 @@ body.vignette::after {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   transition: background-color 0.5s ease-in-out;
-  z-index: -1;
+  z-index: 9999;
+  pointer-events: auto;
 }
 
 .menuRule {
