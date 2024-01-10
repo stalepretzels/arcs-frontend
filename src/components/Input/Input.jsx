@@ -18,10 +18,10 @@ export function IconButton({ onClick, children, size, icon, type, color }) {
   );
 }
 
-export function MenuIconButton({ onClick, children, size, icon, type, color }) {
+export function MenuIconButton({ onClick, children, size, icon, type }) {
   return (
     <button className="menuIconButton" onClick={onClick}>
-      <box-icon name={icon} type={type} size={size}>{children}</box-icon>
+      <box-icon name={icon} type={type} size={size} color="white">{children}</box-icon>
     </button>
   );
 }
