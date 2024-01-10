@@ -82,7 +82,7 @@ function Sidebar() {
         </li>
         <li>
           <div id="connected" className="menuButton">
-            <ion-icon name="cloud" style={{fontSize: '32px'}}></ion-icon>
+            <ion-icon name="information-circle" style={{fontSize: '32px'}}></ion-icon>
           </div>
         </li>
       </ul>
