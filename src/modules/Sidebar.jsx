@@ -1,5 +1,5 @@
 import "./Sidebar.css";
-import {IconButton} from './components/Input/Input.jsx';
+import {IconButton} from '../components/Input/Input.jsx';
 
 let notifMuted = localStorage.getItem("notifMuted") || true,
   room = "::GENERAL";
