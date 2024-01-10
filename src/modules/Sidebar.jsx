@@ -76,13 +76,13 @@ function Sidebar() {
         <li>
           <MenuIconButton
             onClick={() => (window.location = "/about")}
-            icon="clipboard"
+            icon="information-circle"
             size="32px"
           ></MenuIconButton>
         </li>
         <li>
           <div id="connected" className="menuButton">
-            <ion-icon name="information-circle" style={{fontSize: '32px'}}></ion-icon>
+            <ion-icon name="cloud" style={{fontSize: '32px'}}></ion-icon>
           </div>
         </li>
       </ul>
