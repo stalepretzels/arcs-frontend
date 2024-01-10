@@ -30,11 +30,6 @@
   border-radius: 1em;
 }
 
-#connected {
-  justify-self: center;
-  font-size: 32px;
-}
-
 .menuList {
   list-style: none;
   width: 100%;

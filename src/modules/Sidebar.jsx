@@ -93,11 +93,6 @@ function Sidebar() {
             size="32px"
           ></MenuIconButton>About
         </li>
-        <li>
-          <div id="connected">
-            <ion-icon name="cloud" style={{fontSize: '32px'}}></ion-icon>
-          </div>
-        </li>
       </ul>
     </nav>
   );
