@@ -21,7 +21,7 @@ export function IconButton({ onClick, children, size, icon, type, color }) {
 export function MenuIconButton({ onClick, children, size, icon, type, color }) {
   return (
     <button className="menuIconButton" onClick={onClick}>
-      <box-icon name={icon} type={type} size={size} color={color}>{children}</box-icon>
+      <box-icon name={icon} type={type} size={size}>{children}</box-icon>
     </button>
   );
 }
