@@ -1,4 +1,4 @@
-let notifMuted, loggedIn;
+let loggedIn;
 let alreadyConnected = false;
 let room = "::GENERAL";
 
@@ -97,7 +97,7 @@ class MailboxClass extends MailSystemClass {
   }
 
   sendNotif(pkg) {
-    if (Notification.permission == "granted" && !notifMuted) {
+    if (Notification.permission == "granted" && !localStorage.getItem("notifMuted")) {
       if (!document.hasFocus()) {
         new Notification(pkg.user.disName + "@" + pkg.user.ugn, {
           body: pkg.message,

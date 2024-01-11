@@ -29,18 +29,14 @@ function Sidebar() {
     } else if (Notification.permission === "default") {
       Notification.requestPermission().then((permission) => {
         if (permission === "granted") {
-          if (notifMuted) {
-          notifMuted = false;
-          }
           localStorage.setItem("notifMuted", "false");
           document.getElementById("notificationButton").innerHTML =
             '<ion-icon name="notifications" style="font-size: 32px"></ion-icon>';
         }
       });
     } else {
-      if (notifMuted) {
-      notifMuted = !notifMuted;
-      if (notifMuted === false) {
+        localStorage.setItem("notifMuted", !localStorage.getItem("notifMuted"));
+        if (localStorage.getItem("notifMuted") === false) {
         localStorage.setItem("notifMuted", "false");
         document.getElementById("notificationButton").innerHTML =
           '<ion-icon name="notifications" style="font-size: 32px"></ion-icon>';
@@ -48,9 +44,8 @@ function Sidebar() {
         localStorage.setItem("notifMuted", "true");
         document.getElementById("notificationButton").innerHTML =
           '<ion-icon name="notifications-off" style="font-size: 32px"></ion-icon>';
-      }
     }
-    }
+  }
   }
 
   function handleSidebarExpand() {
