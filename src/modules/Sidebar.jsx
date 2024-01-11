@@ -29,18 +29,18 @@ function Sidebar() {
     } else if (Notification.permission === "default") {
       Notification.requestPermission().then((permission) => {
         if (permission === "granted") {
-          localStorage.setItem("notifMuted", "false");
+          localStorage.setItem("notifMuted", false);
           document.getElementById("notificationButton").innerHTML =
             '<ion-icon name="notifications" style="font-size: 32px"></ion-icon>';
         }
       });
     } else {
-        localStorage.setItem("notifMuted", !localStorage.getItem("notifMuted"));
-        if (Boolean(localStorage.getItem("notifMuted")).valueOf() == false) {
+        localStorage.setItem("notifMuted", !JSON.parse(localStorage.getItem("notifMuted")));
+        if (JSON.parse(localStorage.getItem("notifMuted")) == false) {
         localStorage.setItem("notifMuted", "false");
         document.getElementById("notificationButton").innerHTML =
           '<ion-icon name="notifications" style="font-size: 32px"></ion-icon>';
-      } else if (Boolean(localStorage.getItem("notifMuted")).valueOf() == true) {
+      } else if (JSON.parse(localStorage.getItem("notifMuted")) == true) {
         localStorage.setItem("notifMuted", "true");
         document.getElementById("notificationButton").innerHTML =
           '<ion-icon name="notifications-off" style="font-size: 32px"></ion-icon>';
