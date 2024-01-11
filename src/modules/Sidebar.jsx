@@ -27,62 +27,31 @@ function Sidebar() {
       if (menuContainer.classList.contains("expanded")) {
         menuContainer.classList.toggle("expanded");
         if (document.body.classList.contains("vignette")) {
-        document.body.classList.toggle("vignette");
-      }
+          document.body.classList.toggle("vignette");
+        }
       }
     }
   };
-
-  function handleNotificationButton() {
-    if (Notification.permission === "denied") {
-      /* nothing */
-    } else if (Notification.permission === "default") {
-      Notification.requestPermission().then((permission) => {
-        if (permission === "granted") {
-          localStorage.setItem(
-            "notifMuted",
-            JSON.parse(localStorage.getItem("notifMuted")) || false
-          );
-          document.getElementById("notificationButton").innerHTML =
-            '<ion-icon name="notifications" style="font-size: 32px"></ion-icon>';
-        }
-      });
-    } else {
-      localStorage.setItem(
-        "notifMuted",
-        !JSON.parse(localStorage.getItem("notifMuted"))
-      );
-      if (JSON.parse(localStorage.getItem("notifMuted"))) {
-        localStorage.setItem("notifMuted", "true");
-        document.getElementById("notificationButton").innerHTML =
-          '<ion-icon name="notifications-off" style="font-size: 32px"></ion-icon>';
-      } else if (!JSON.parse(localStorage.getItem("notifMuted"))) {
-        localStorage.setItem("notifMuted", "false");
-        document.getElementById("notificationButton").innerHTML =
-          '<ion-icon name="notifications" style="font-size: 32px"></ion-icon>';
-      }
-    }
-  }
 
   function handleSidebarExpand() {
     const menuContainer = document.querySelector(".menuContainer");
     const settingsMenu = document.querySelector(".settingsMenu");
     menuContainer.classList.toggle("expanded");
-  
-    if (!settingsMenu.classList.contains("expanded")) {
-        document.body.classList.toggle("vignette");
-    }
-}
 
-function handleSettingsExpand() {
+    if (!settingsMenu.classList.contains("expanded")) {
+      document.body.classList.toggle("vignette");
+    }
+  }
+
+  function handleSettingsExpand() {
     const menuContainer = document.querySelector(".menuContainer");
     const settingsMenu = document.querySelector(".settingsMenu");
     settingsMenu.classList.toggle("expanded");
-  
+
     if (!menuContainer.classList.contains("expanded")) {
-        document.body.classList.toggle("vignette");
+      document.body.classList.toggle("vignette");
     }
-}
+  }
 
   return (
     <>
@@ -116,15 +85,6 @@ function handleSettingsExpand() {
           </li>
           <li>
             <MenuIconButton
-              id="notificationButton"
-              onClick={handleNotificationButton}
-              icon="notifications"
-              size="32px"
-            ></MenuIconButton>
-            Notifications
-          </li>
-          <li>
-            <MenuIconButton
               onClick={() => (window.location = "/rules")}
               icon="reader"
               size="32px"
@@ -155,15 +115,46 @@ function handleSettingsExpand() {
 }
 
 function Settings() {
+  function handleNotificationButton() {
+    if (Notification.permission === "denied") {
+      /* nothing */
+    } else if (Notification.permission === "default") {
+      Notification.requestPermission().then((permission) => {
+        if (permission === "granted") {
+          localStorage.setItem(
+            "notifMuted",
+            JSON.parse(localStorage.getItem("notifMuted")) || false
+          );
+          document.getElementById("notificationButton").innerHTML =
+            '<ion-icon name="notifications" style="font-size: 32px"></ion-icon>Notifications on';
+        }
+      });
+    } else {
+      localStorage.setItem(
+        "notifMuted",
+        !JSON.parse(localStorage.getItem("notifMuted"))
+      );
+      if (JSON.parse(localStorage.getItem("notifMuted"))) {
+        localStorage.setItem("notifMuted", "true");
+        document.getElementById("notificationButton").innerHTML =
+          '<ion-icon name="notifications-off" style="font-size: 32px"></ion-icon>Notifications off';
+      } else if (!JSON.parse(localStorage.getItem("notifMuted"))) {
+        localStorage.setItem("notifMuted", "false");
+        document.getElementById("notificationButton").innerHTML =
+          '<ion-icon name="notifications" style="font-size: 32px"></ion-icon>Notifications on';
+      }
+    }
+  }
+
   function handleSettingsExpand() {
     const menuContainer = document.querySelector(".menuContainer");
     const settingsMenu = document.querySelector(".settingsMenu");
     settingsMenu.classList.toggle("expanded");
-  
+
     if (!menuContainer.classList.contains("expanded")) {
-        document.body.classList.toggle("vignette");
+      document.body.classList.toggle("vignette");
     }
-}
+  }
 
   return (
     <nav className="settingsMenu">
@@ -176,9 +167,15 @@ function Settings() {
         ></MenuIconButton>
       </div>
       <ul className="menuList">
-        <li>This is</li>
-        <li>still being</li>
-        <li>added!</li>
+        <li>
+          <MenuIconButton
+            id="notificationButton"
+            onClick={handleNotificationButton}
+            icon="notifications"
+            size="32px"
+          ></MenuIconButton>
+          Notifications On
+        </li>
       </ul>
     </nav>
   );
