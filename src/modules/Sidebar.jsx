@@ -36,11 +36,11 @@ function Sidebar() {
       });
     } else {
         localStorage.setItem("notifMuted", !localStorage.getItem("notifMuted"));
-        if (localStorage.getItem("notifMuted") == false) {
+        if (Boolean(localStorage.getItem("notifMuted")).valueOf() == false) {
         localStorage.setItem("notifMuted", "false");
         document.getElementById("notificationButton").innerHTML =
           '<ion-icon name="notifications" style="font-size: 32px"></ion-icon>';
-      } else {
+      } else if (Boolean(localStorage.getItem("notifMuted")).valueOf() == true) {
         localStorage.setItem("notifMuted", "true");
         document.getElementById("notificationButton").innerHTML =
           '<ion-icon name="notifications-off" style="font-size: 32px"></ion-icon>';
