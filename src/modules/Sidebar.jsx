@@ -68,19 +68,21 @@ function Sidebar() {
     const menuContainer = document.querySelector(".menuContainer");
     const settingsMenu = document.querySelector(".settingsMenu");
     menuContainer.classList.toggle("expanded");
+  
     if (!settingsMenu.classList.contains("expanded")) {
-      document.body.classList.toggle("vignette");
+        document.body.classList.toggle("vignette");
     }
-  }
+}
 
-  function handleSettingsExpand() {
+function handleSettingsExpand() {
     const menuContainer = document.querySelector(".menuContainer");
     const settingsMenu = document.querySelector(".settingsMenu");
     settingsMenu.classList.toggle("expanded");
+  
     if (!menuContainer.classList.contains("expanded")) {
-      document.body.classList.toggle("vignette");
+        document.body.classList.toggle("vignette");
     }
-  }
+}
 
   return (
     <>
@@ -154,10 +156,14 @@ function Sidebar() {
 
 function Settings() {
   function handleSettingsExpand() {
+    const menuContainer = document.querySelector(".menuContainer");
     const settingsMenu = document.querySelector(".settingsMenu");
     settingsMenu.classList.toggle("expanded");
-    document.body.classList.toggle("vignette");
-  }
+  
+    if (!menuContainer.classList.contains("expanded")) {
+        document.body.classList.toggle("vignette");
+    }
+}
 
   return (
     <nav className="settingsMenu">
