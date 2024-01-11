@@ -128,11 +128,11 @@ function Settings() {
           if (JSON.parse(localStorage.getItem("notifMuted"))) {
             document.getElementById("notificationButton").innerHTML =
             '<ion-icon name="notifications-off" style="font-size: 32px"></ion-icon>';
-            document.getElementById("notifTxtIndicator").innerText = " off"
+            document.getElementById("notifTxtIndicator").innerText = "off"
           } else if (!JSON.parse(localStorage.getItem("notifMuted"))) {
             document.getElementById("notificationButton").innerHTML =
             '<ion-icon name="notifications" style="font-size: 32px"></ion-icon>';
-            document.getElementById("notifTxtIndicator").innerText = " on"
+            document.getElementById("notifTxtIndicator").innerText = "on"
           }
         }
       });
@@ -145,12 +145,12 @@ function Settings() {
         localStorage.setItem("notifMuted", "true");
         document.getElementById("notificationButton").innerHTML =
           '<ion-icon name="notifications-off" style="font-size: 32px"></ion-icon>';
-          document.getElementById("notifTxtIndicator").innerText = " off"
+          document.getElementById("notifTxtIndicator").innerText = "off"
       } else if (!JSON.parse(localStorage.getItem("notifMuted"))) {
         localStorage.setItem("notifMuted", "false");
         document.getElementById("notificationButton").innerHTML =
           '<ion-icon name="notifications" style="font-size: 32px"></ion-icon>';
-          document.getElementById("notifTxtIndicator").innerText = " on"
+          document.getElementById("notifTxtIndicator").innerText = "on"
       }
     }
   }
@@ -183,7 +183,7 @@ function Settings() {
             icon="notifications"
             size="32px"
           ></MenuIconButton>
-          Notifications <span id="notifTxtIndicator">On</span>
+          Notifications&#32;<span id="notifTxtIndicator">On</span>
         </li>
       </ul>
     </nav>
