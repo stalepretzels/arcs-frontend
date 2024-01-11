@@ -36,7 +36,7 @@ function Sidebar() {
       });
     } else {
         localStorage.setItem("notifMuted", !localStorage.getItem("notifMuted"));
-        if (localStorage.getItem("notifMuted") === false) {
+        if (localStorage.getItem("notifMuted") == false) {
         localStorage.setItem("notifMuted", "false");
         document.getElementById("notificationButton").innerHTML =
           '<ion-icon name="notifications" style="font-size: 32px"></ion-icon>';
