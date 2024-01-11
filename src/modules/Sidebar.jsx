@@ -125,8 +125,15 @@ function Settings() {
             "notifMuted",
             JSON.parse(localStorage.getItem("notifMuted")) || false
           );
-          document.getElementById("notificationButton").innerHTML =
-            '<ion-icon name="notifications" style="font-size: 32px"></ion-icon>Notifications on';
+          if (JSON.parse(localStorage.getItem("notifMuted"))) {
+            document.getElementById("notificationButton").innerHTML =
+            '<ion-icon name="notifications-off" style="font-size: 32px"></ion-icon>';
+            document.getElementById("notifTxtIndicator").innerText = "off"
+          } else if (!JSON.parse(localStorage.getItem("notifMuted"))) {
+            document.getElementById("notificationButton").innerHTML =
+            '<ion-icon name="notifications" style="font-size: 32px"></ion-icon>';
+            document.getElementById("notifTxtIndicator").innerText = "on"
+          }
         }
       });
     } else {
@@ -137,11 +144,13 @@ function Settings() {
       if (JSON.parse(localStorage.getItem("notifMuted"))) {
         localStorage.setItem("notifMuted", "true");
         document.getElementById("notificationButton").innerHTML =
-          '<ion-icon name="notifications-off" style="font-size: 32px"></ion-icon>Notifications off';
+          '<ion-icon name="notifications-off" style="font-size: 32px"></ion-icon>';
+          document.getElementById("notifTxtIndicator").innerText = "off"
       } else if (!JSON.parse(localStorage.getItem("notifMuted"))) {
         localStorage.setItem("notifMuted", "false");
         document.getElementById("notificationButton").innerHTML =
-          '<ion-icon name="notifications" style="font-size: 32px"></ion-icon>Notifications on';
+          '<ion-icon name="notifications" style="font-size: 32px"></ion-icon>';
+          document.getElementById("notifTxtIndicator").innerText = "on"
       }
     }
   }
@@ -174,7 +183,7 @@ function Settings() {
             icon="notifications"
             size="32px"
           ></MenuIconButton>
-          Notifications On
+          Notifications <span id="notifTxtIndicator">On</span>
         </li>
       </ul>
     </nav>
