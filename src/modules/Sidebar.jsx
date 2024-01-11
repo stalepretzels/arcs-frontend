@@ -29,13 +29,16 @@ function Sidebar() {
     } else if (Notification.permission === "default") {
       Notification.requestPermission().then((permission) => {
         if (permission === "granted") {
+          if (notifMuted) {
           notifMuted = false;
+          }
           localStorage.setItem("notifMuted", "false");
           document.getElementById("notificationButton").innerHTML =
             '<ion-icon name="notifications" style="font-size: 32px"></ion-icon>';
         }
       });
     } else {
+      if (notifMuted) {
       notifMuted = !notifMuted;
       if (notifMuted === false) {
         localStorage.setItem("notifMuted", "false");
@@ -46,6 +49,7 @@ function Sidebar() {
         document.getElementById("notificationButton").innerHTML =
           '<ion-icon name="notifications-off" style="font-size: 32px"></ion-icon>';
       }
+    }
     }
   }
 
@@ -91,7 +95,7 @@ function Sidebar() {
         <li>
           <MenuIconButton
             onClick={() => (window.location = "/rules")}
-            icon="book"
+            icon="reader"
             size="32px"
           ></MenuIconButton>Rules
         </li>
