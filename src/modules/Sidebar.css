@@ -62,7 +62,6 @@ body.vignette::after {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-items: center;
   white-space: nowrap;
 }
 
