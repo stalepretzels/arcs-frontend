@@ -57,7 +57,7 @@ body.vignette::after {
 .menuList {
   list-style: none;
   width: 100%;
-  padding: 0, 5%;
+  padding: 0 0.2em;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -68,7 +68,7 @@ body.vignette::after {
 .menuList>li {
   display: flex;
   justify-content: center;
-  /*align-items: center;*/
+  align-items: center;
 }
 
 .menuList>li>button>ion-icon {
