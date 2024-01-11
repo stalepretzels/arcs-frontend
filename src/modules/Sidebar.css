@@ -62,8 +62,14 @@ body.vignette::after {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-/*  justify-items: center;*/
-  text-wrap: nowrap;
+  justify-items: center;
+  white-space: nowrap;
+}
+
+.menuList>li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menuList>li>button>ion-icon {
