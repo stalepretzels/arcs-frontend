@@ -13,33 +13,11 @@ function joinRoomLogic(rtj) {
   }
 }
 
-function Settings() {
-  function handleSettingsExpand() {
-    const settingsMenu = document.getElementById('settingsMenu');
-    window.alert(settingsMenu)
-    window.alert(document.getElementById("settingsMenu"))
-  settingsMenu.classList.toggle('expanded');
-  document.body.classList.toggle('vignette');
-  }
-
-  return 
-  <nav className="settingsMenu" id="settingsMenu">
-    <div className="settingsHeader">
-    <MenuIconButton size="32px" icon="close" id="closeSettingsButton" onClick={handleSettingsExpand}></MenuIconButton>
-  </div>
-  <ul className="menuList">
-    <li>This is</li>
-    <li>still being</li>
-    <li>added!</li>
-  </ul>
-</nav>
-}
-
 function Sidebar() {
   document.onclick = function(event) {
     if (event.target.classList.contains('vignette')) {
       const menuContainer = document.querySelector('.menuContainer');
-      const settingsMenu = document.getElementById('settingsMenu');
+      const settingsMenu = document.querySelector('.settingsMenu');
       if (settingsMenu.classList.contains("expanded")) {
       settingsMenu.classList.toggle('expanded');
       document.body.classList.toggle('vignette');
@@ -82,14 +60,13 @@ function Sidebar() {
   }
 
   function handleSettingsExpand() {
-    const settingsMenu = document.getElementById('settingsMenu');
-    window.alert(settingsMenu)
-    window.alert(document.getElementById("settingsMenu"))
+    const settingsMenu = document.querySelector('.settingsMenu');
   settingsMenu.classList.toggle('expanded');
   document.body.classList.toggle('vignette');
   }
 
   return (
+    <>
     <nav className="menuContainer">
       <ul className="menuList">
       <li>
@@ -145,7 +122,29 @@ function Sidebar() {
         </li>
       </ul>
     </nav>
+    <Settings />
+    </>
   );
 }
 
-export { Sidebar, Settings };
+function Settings() {
+  function handleSettingsExpand() {
+    const settingsMenu = document.querySelector('.settingsMenu');
+  settingsMenu.classList.toggle('expanded');
+  document.body.classList.toggle('vignette');
+  }
+
+  return 
+  <nav className="settingsMenu">
+    <div className="settingsHeader">
+    <MenuIconButton size="32px" icon="close" id="closeSettingsButton" onClick={handleSettingsExpand}></MenuIconButton>
+  </div>
+  <ul className="menuList">
+    <li>This is</li>
+    <li>still being</li>
+    <li>added!</li>
+  </ul>
+</nav>
+}
+
+export { Sidebar };
