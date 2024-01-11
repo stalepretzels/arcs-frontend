@@ -183,7 +183,7 @@ function Settings() {
             icon="notifications"
             size="32px"
           ></MenuIconButton>
-          Notifications&#32;<span id="notifTxtIndicator">On</span>
+          Notifications&nbsp;<span id="notifTxtIndicator"></span>
         </li>
       </ul>
     </nav>
