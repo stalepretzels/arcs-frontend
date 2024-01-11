@@ -1,2 +1,3 @@
 Fix notification muting. [bug fix];
 Fix sidebar styling. [bug fix];
+Notifications now 

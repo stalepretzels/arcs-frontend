@@ -29,7 +29,7 @@ function Sidebar() {
     } else if (Notification.permission === "default") {
       Notification.requestPermission().then((permission) => {
         if (permission === "granted") {
-          localStorage.setItem("notifMuted", false);
+          localStorage.setItem("notifMuted", JSON.parse(localStorage.getItem("notifMuted"))||false);
           document.getElementById("notificationButton").innerHTML =
             '<ion-icon name="notifications" style="font-size: 32px"></ion-icon>';
         }
