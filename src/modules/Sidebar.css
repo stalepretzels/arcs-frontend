@@ -68,7 +68,7 @@ body.vignette::after {
 .menuList>li {
   display: flex;
   justify-content: center;
-  align-items: center;
+  /*align-items: center;*/
 }
 
 .menuList>li>button>ion-icon {
