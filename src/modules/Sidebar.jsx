@@ -61,6 +61,7 @@ function Sidebar() {
 
   function handleSettingsExpand() {
     const settingsMenu = document.querySelector('.settingsMenu');
+    window.alert(settingsMenu)
   settingsMenu.classList.toggle('expanded');
   document.body.classList.toggle('vignette');
   }
@@ -127,6 +128,7 @@ function Sidebar() {
 function Settings() {
   function handleSettingsExpand() {
     const settingsMenu = document.querySelector('.settingsMenu');
+    window.alert(settingsMenu)
   settingsMenu.classList.toggle('expanded');
   document.body.classList.toggle('vignette');
   }
