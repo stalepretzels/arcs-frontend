@@ -134,7 +134,7 @@ function Settings() {
   document.body.classList.toggle('vignette');
   }
 
-  return 
+  return (
   <nav className="settingsMenu">
     <div className="settingsHeader">
     <MenuIconButton size="32px" icon="close" id="closeSettingsButton" onClick={handleSettingsExpand}></MenuIconButton>
@@ -145,6 +145,7 @@ function Settings() {
     <li>added!</li>
   </ul>
 </nav>
+);
 }
 
 export { Sidebar };
