@@ -68,7 +68,7 @@ function Sidebar() {
     const menuContainer = document.querySelector(".menuContainer");
     const settingsMenu = document.querySelector(".settingsMenu");
     menuContainer.classList.toggle("expanded");
-    if (settingsMenu.classList.contains("expanded")) {
+    if (!settingsMenu.classList.contains("expanded")) {
       document.body.classList.toggle("vignette");
     }
   }
@@ -77,7 +77,7 @@ function Sidebar() {
     const menuContainer = document.querySelector(".menuContainer");
     const settingsMenu = document.querySelector(".settingsMenu");
     settingsMenu.classList.toggle("expanded");
-    if (menuContainer.classList.contains("expanded")) {
+    if (!menuContainer.classList.contains("expanded")) {
       document.body.classList.toggle("vignette");
     }
   }
