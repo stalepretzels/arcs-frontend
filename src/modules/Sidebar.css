@@ -80,12 +80,14 @@ body.vignette::after {
   position: fixed;
   top: 0;
   right: 0;
+  z-index: 9999;
   border-top-left-radius: 1em;
   border-bottom-left-radius: 1em;
   width: 0;
   height: 100vh;
   background-color: var(--menubg);
   transition: width 0.5s ease;
+  padding: 5px;
 }
 
 .settingsMenu.expanded {

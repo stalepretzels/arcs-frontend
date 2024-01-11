@@ -25,7 +25,13 @@
   cursor: pointer;
   color: var(--txtclr);
   background: var(--chtsubbg);
+  z-index: 2
 }
+
+#chatSubmit>ion-icon, .chatFiles>ion-icon {
+  z-index: 3;
+}
+
 
 #selectedFile {
   display: none;
