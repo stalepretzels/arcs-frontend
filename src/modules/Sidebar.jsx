@@ -13,6 +13,27 @@ function joinRoomLogic(rtj) {
   }
 }
 
+function Settings() {
+  function handleSettingsExpand() {
+    const settingsMenu = document.querySelector('.settingsMenu');
+    window.alert(settingsMenu)
+  settingsMenu.classList.toggle('expanded');
+  document.body.classList.toggle('vignette');
+  }
+
+  return 
+  <nav className="settingsMenu">
+    <div className="settingsHeader">
+    <MenuIconButton size="32px" icon="close" id="closeSettingsButton" onClick={handleSettingsExpand}></MenuIconButton>
+  </div>
+  <ul className="menuList">
+    <li>This is</li>
+    <li>still being</li>
+    <li>added!</li>
+  </ul>
+</nav>
+}
+
 function Sidebar() {
   document.onclick = function(event) {
     if (event.target.classList.contains('vignette')) {
@@ -62,6 +83,7 @@ function Sidebar() {
   function handleSettingsExpand() {
     const settingsMenu = document.querySelector('.settingsMenu');
     window.alert(settingsMenu)
+    window.alert(document.querySelector(".settingsMenu"))
   settingsMenu.classList.toggle('expanded');
   document.body.classList.toggle('vignette');
   }
@@ -123,27 +145,6 @@ function Sidebar() {
       </ul>
     </nav>
   );
-}
-
-function Settings() {
-  function handleSettingsExpand() {
-    const settingsMenu = document.querySelector('.settingsMenu');
-    window.alert(settingsMenu)
-  settingsMenu.classList.toggle('expanded');
-  document.body.classList.toggle('vignette');
-  }
-
-  return 
-  <nav className="settingsMenu">
-    <div className="settingsHeader">
-    <MenuIconButton size="32px" icon="close" id="closeSettingsButton" onClick={handleSettingsExpand}></MenuIconButton>
-  </div>
-  <ul className="menuList">
-    <li>This is</li>
-    <li>still being</li>
-    <li>added!</li>
-  </ul>
-</nav>
 }
 
 export { Sidebar, Settings };
