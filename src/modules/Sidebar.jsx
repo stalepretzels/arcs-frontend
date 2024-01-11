@@ -1,8 +1,7 @@
 import "./Sidebar.css";
 import { MenuIconButton } from "../components/Input/Input.jsx";
 
-let notifMuted = localStorage.getItem("notifMuted") || true,
-  room = "::GENERAL";
+let room = "::GENERAL";
 
 function joinRoomLogic(rtj) {
   if (room === rtj) {
@@ -18,8 +17,14 @@ function Sidebar() {
   document.onclick = function(event) {
     if (event.target.classList.contains('vignette')) {
       const menuContainer = document.querySelector('.menuContainer');
-      menuContainer.classList.toggle('expanded');
+      const settingsMenu = document.querySelector('.settingsMenu');
+      if (settingsMenu.classList.contains("expanded")) {
+      settingsMenu.classList.toggle('expanded');
       document.body.classList.toggle('vignette');
+    } else if (menuContainer.classList.contains("expanded")) {
+        menuContainer.classList.toggle('expanded');
+        document.body.classList.toggle('vignette');
+      }
         }
   };
   
@@ -51,6 +56,12 @@ function Sidebar() {
   function handleSidebarExpand() {
     const menuContainer = document.querySelector('.menuContainer');
   menuContainer.classList.toggle('expanded');
+  document.body.classList.toggle('vignette');
+  }
+
+  function handleSettingsExpand() {
+    const settingsMenu = document.querySelector('.settingsMenu');
+  settingsMenu.classList.toggle('expanded');
   document.body.classList.toggle('vignette');
   }
 
@@ -101,9 +112,36 @@ function Sidebar() {
             size="32px"
           ></MenuIconButton>About
         </li>
+        <li>
+          <MenuIconButton
+            onClick={handleSettingsExpand}
+            icon="settings"
+            size="32px"
+          ></MenuIconButton>Settings
+        </li>
       </ul>
     </nav>
   );
 }
 
-export { Sidebar };
+function Settings() {
+  function handleSettingsExpand() {
+    const settingsMenu = document.querySelector('.settingsMenu');
+  settingsMenu.classList.toggle('expanded');
+  document.body.classList.toggle('vignette');
+  }
+
+  return 
+  <nav className="settingsMenu">
+    <div className="settingsHeader">
+    <MenuIconButton size="32px" icon="close" id="closeSettingsButton" onClick={handleSettingsExpand}></MenuIconButton>
+  </div>
+  <ul className="menuList">
+    <li>This is</li>
+    <li>still being</li>
+    <li>added!</li>
+  </ul>
+</nav>
+}
+
+export { Sidebar, Settings };

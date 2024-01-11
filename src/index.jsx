@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import { Sidebar } from "./modules/Sidebar.jsx";
+import { Sidebar, Settings } from "./modules/Sidebar.jsx";
 import { Chat, Intro, Profile, Edit } from "./modules/App.jsx";
 import { About, Rules, ChangelogAbout } from "./modules/Extras.jsx";
 import { ErrorComp } from "./modules/Error.jsx"
@@ -63,6 +63,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Sidebar />
+    <Settings />
+
     <main className="mainContainer">
       <header className="titleContainer">
         <h1>
