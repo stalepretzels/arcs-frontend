@@ -97,7 +97,7 @@ class MailboxClass extends MailSystemClass {
   }
 
   sendNotif(pkg) {
-    if (Notification.permission == "granted" && !localStorage.getItem("notifMuted")) {
+    if (Notification.permission == "granted" && !JSON.parse(localStorage.getItem("notifMuted"))) {
       if (!document.hasFocus()) {
         new Notification(pkg.user.disName + "@" + pkg.user.ugn, {
           body: pkg.message,

@@ -36,14 +36,14 @@ function Sidebar() {
       });
     } else {
         localStorage.setItem("notifMuted", !JSON.parse(localStorage.getItem("notifMuted")));
-        if (JSON.parse(localStorage.getItem("notifMuted")) == false) {
+        if (JSON.parse(localStorage.getItem("notifMuted"))) {
+          localStorage.setItem("notifMuted", "true");
+        document.getElementById("notificationButton").innerHTML =
+          '<ion-icon name="notifications-off" style="font-size: 32px"></ion-icon>';
+      } else if (!JSON.parse(localStorage.getItem("notifMuted"))) {
         localStorage.setItem("notifMuted", "false");
         document.getElementById("notificationButton").innerHTML =
           '<ion-icon name="notifications" style="font-size: 32px"></ion-icon>';
-      } else if (JSON.parse(localStorage.getItem("notifMuted")) == true) {
-        localStorage.setItem("notifMuted", "true");
-        document.getElementById("notificationButton").innerHTML =
-          '<ion-icon name="notifications-off" style="font-size: 32px"></ion-icon>';
     }
   }
   }
