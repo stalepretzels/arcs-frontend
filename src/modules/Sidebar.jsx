@@ -15,14 +15,15 @@ function joinRoomLogic(rtj) {
 
 function Settings() {
   function handleSettingsExpand() {
-    const settingsMenu = document.querySelector('.settingsMenu');
+    const settingsMenu = document.getElementById('settingsMenu');
     window.alert(settingsMenu)
+    window.alert(document.getElementById("settingsMenu"))
   settingsMenu.classList.toggle('expanded');
   document.body.classList.toggle('vignette');
   }
 
   return 
-  <nav className="settingsMenu">
+  <nav className="settingsMenu" id="settingsMenu">
     <div className="settingsHeader">
     <MenuIconButton size="32px" icon="close" id="closeSettingsButton" onClick={handleSettingsExpand}></MenuIconButton>
   </div>
@@ -38,7 +39,7 @@ function Sidebar() {
   document.onclick = function(event) {
     if (event.target.classList.contains('vignette')) {
       const menuContainer = document.querySelector('.menuContainer');
-      const settingsMenu = document.querySelector('.settingsMenu');
+      const settingsMenu = document.getElementById('settingsMenu');
       if (settingsMenu.classList.contains("expanded")) {
       settingsMenu.classList.toggle('expanded');
       document.body.classList.toggle('vignette');
@@ -81,9 +82,9 @@ function Sidebar() {
   }
 
   function handleSettingsExpand() {
-    const settingsMenu = document.querySelector('.settingsMenu');
+    const settingsMenu = document.getElementById('settingsMenu');
     window.alert(settingsMenu)
-    window.alert(document.querySelector(".settingsMenu"))
+    window.alert(document.getElementById("settingsMenu"))
   settingsMenu.classList.toggle('expanded');
   document.body.classList.toggle('vignette');
   }
