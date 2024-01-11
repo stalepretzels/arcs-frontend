@@ -87,11 +87,12 @@ body.vignette::after {
   height: 100vh;
   background-color: var(--menubg);
   transition: width 0.5s ease;
-  padding: 5px;
+  padding: 0;
 }
 
 .settingsMenu.expanded {
   width: 256px;
+  padding: 5px;
 }
 
 .settingsHeader {
