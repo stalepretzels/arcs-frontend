@@ -138,7 +138,7 @@ document.getElementById("chatSubmit").onclick = function (e) {
 };
 
 $("#chatInput").keypress(function (e) {
-  if (e.which === 13 && !e.shiftKey) {
+  if (e.key === "Enter" && !e.shiftKey) {
     e.preventDefault();
 
     let message = $("#chatInput").val();
@@ -155,7 +155,7 @@ $("#chatInput").keypress(function (e) {
 });
 
 document.addEventListener("keypress", (e)=>{
-  if (e.which === 220 && !e.shiftKey && !(document.getElementById("chatInput") === document.activeElement)) {
+  if (e.key === "\\" && !e.shiftKey && !(document.getElementById("chatInput") === document.activeElement)) {
     document.getElementById("chatInput").focus();
   }
 })
