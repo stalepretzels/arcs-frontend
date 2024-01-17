@@ -154,6 +154,12 @@ $("#chatInput").keypress(function (e) {
   }
 });
 
+document.addEventListener("keypress", (e)=>{
+  if (e.which === 220 && !e.shiftKey && !(document.getElementById("chatInput") === document.activeElement)) {
+    document.getElementById("chatInput").focus();
+  }
+})
+
 socket.on("broad", function (data) {
   Mailbox.append(data);
 });

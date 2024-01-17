@@ -1,3 +1,4 @@
 Fix vignette styling. [bug fix];
 Add empty settings menu. [being added];
 Move notifications to settings menu. [added];
+Added backslash to focus chat input. [added];
