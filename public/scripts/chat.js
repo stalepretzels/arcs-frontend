@@ -156,6 +156,7 @@ $("#chatInput").keypress(function (e) {
 
 document.addEventListener("keypress", (e)=>{
   if (e.key === "\\" && !e.shiftKey && !(document.getElementById("chatInput") === document.activeElement)) {
+    e.preventDefault();
     document.getElementById("chatInput").focus();
   }
 })
