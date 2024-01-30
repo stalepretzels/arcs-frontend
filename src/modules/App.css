@@ -62,5 +62,5 @@
   padding: 5px;
   border-top-right-radius: 0.5em;
   border-top-left-radius: 0.5em;
-  align-self: flex-start;
+  justify-self: flex-end;
 }
