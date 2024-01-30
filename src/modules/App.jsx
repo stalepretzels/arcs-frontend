@@ -79,8 +79,8 @@ function Profile() {
 }
 
 function Edit() {
-  useEffect(async () => {
-    let scripts = await addDependencyScriptsAsync(["./scripts/jquery.min.js", "./scripts/chance.min.js"]);
+  useEffect(() => {
+    let scripts = addDependencyScriptsDefer(["./scripts/jquery.min.js", "./scripts/chance.min.js"]);
     return () => {
       scripts.forEach((script)=>{
         document.body.removeChild(script);
