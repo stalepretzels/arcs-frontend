@@ -81,33 +81,20 @@ function Profile() {
 function Edit() {
   useEffect(async () => {
     let scriptsAsync = await addDependencyScriptsAsync(["./scripts/jquery.min.js", "./scripts/chance.min.js"]);
+    let scripts = addDependencyScripts(["./scripts/editprofile.js"]);
     return () => {
+      scripts.forEach((script)=>{
+        document.body.removeChild(script);
+      })
       scriptsAsync.forEach((script)=>{
         document.body.removeChild(script);
       })
     };
   }, []);
 
-  function handleFormSubmit(event) {
-    event.preventDefault();
-    let username = $("#usernameInput").val();
-    let bio = $("#bioInput").val();
-    let user = JSON.parse(localStorage.getItem("user")) || {};
-    let uuid = user.uuid || chance.guid();
-    let useridentifier = user.ugn || chance.integer({ min: 1000, max: 9999 });
-    let UserModel = {
-      disName: username,
-      uuid: uuid,
-      ugn: useridentifier,
-      bio: bio,
-    };
-    localStorage.setItem("user", JSON.stringify(UserModel));
-    window.location = "/chat";
-  }
-
   return (
     <>
-      <form onSubmit={(e)=>handleFormSubmit(e)} action="" id="userForm">
+      <form action="" id="userForm">
       <input placeholder='Username...' id="usernameInput" maxlength='20' type="text" required />
       <input placeholder='Bio...' id="bioInput" type="text" />
 
