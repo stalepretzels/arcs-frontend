@@ -94,7 +94,7 @@ function Edit() {
 
   return (
     <>
-      <form action="" id="userForm">
+      <form onSubmit={(event)=>submitHandler(event)} action="" id="userForm">
       <input placeholder='Username...' id="usernameInput" maxlength='20' type="text" required />
       <input placeholder='Bio...' id="bioInput" type="text" />
 
