@@ -47,7 +47,7 @@
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
-  column-gap: 10px;
+  column-gap: 0;
 }
 
 .mainContainer {
