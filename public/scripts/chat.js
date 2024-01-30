@@ -1,5 +1,3 @@
-import '/arrive.min.js';
-
 let loggedIn;
 let alreadyConnected = false;
 let room = "::GENERAL";

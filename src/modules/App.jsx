@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { addDependencyScripts } from "../utility.js";
+import { addDependencyScripts, addDependencyScriptsAsync } from "../utility.js";
 
 import './App.css';
 import './Message.css';
@@ -8,12 +8,15 @@ import {IconButton} from  '../components/Input/Input.jsx';
 
 function Chat() {
   useEffect(() => {
-    let dependencies = ["./scripts/chat.js"];
-    let scripts = addDependencyScripts(dependencies);
+    let scriptsAsync = addDependencyScriptsAsync(["./scripts/arrive.min.js"]);
+    let scripts = addDependencyScripts(["./scripts/chat.js"]);
 
     // Clean up the script when the component is unmounted
     return () => {
       scripts.forEach((script)=>{
+        document.body.removeChild(script);
+      })
+      scriptsAsync.forEach((script)=>{
         document.body.removeChild(script);
       })
     };
