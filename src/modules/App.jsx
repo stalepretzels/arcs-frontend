@@ -94,12 +94,12 @@ function Edit() {
 
   return (
     <>
-      <form onSubmit={(event)=>submitHandler(event)} action="" id="userForm">
-      <input placeholder='Username...' id="usernameInput" maxlength='20' type="text" required />
-      <input placeholder='Bio...' id="bioInput" type="text" />
+      <form action="" id="userForm">
+    <input placeholder='Username...' id="usernameInput" maxlength='20' type="text" required />
+    <input placeholder='Bio...' id="bioInput" type="text" />
 
-      <input type="submit" />
-    </form>
+    <input type="submit" />
+    </form>
     </>
   );
 }

@@ -1,4 +1,4 @@
-function submitHandler(event) {
+document.getElementById("userForm").addEventListener("submit", (event) => {
     event.preventDefault();
     let username = $("#usernameInput").val();
     let bio = $("#bioInput").val();
@@ -13,4 +13,4 @@ function submitHandler(event) {
     };
     localStorage.setItem("user", JSON.stringify(UserModel));
     window.location = "/chat";
-  }
+  })
