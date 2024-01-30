@@ -7,8 +7,8 @@ import './Message.css';
 import {IconButton} from  '../components/Input/Input.jsx';
 
 function Chat() {
-  useEffect(() => {
-    let scriptsAsync = addDependencyScriptsAsync(["./scripts/arrive.min.js"]);
+  useEffect(async () => {
+    let scriptsAsync = await addDependencyScriptsAsync(["./scripts/arrive.min.js"]);
     let scripts = addDependencyScripts(["./scripts/chat.js"]);
 
     // Clean up the script when the component is unmounted
