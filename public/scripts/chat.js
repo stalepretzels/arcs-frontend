@@ -1,3 +1,5 @@
+import '/arrive.min.js';
+
 let loggedIn;
 let alreadyConnected = false;
 let room = "::GENERAL";
@@ -178,3 +180,7 @@ function joinRoomLogic(rtj) {
     room = rtj;
   }
 }
+
+document.arrive("time", function(elem) {
+  elem.innerHTML = new Date(elem.getAttribute("datetime")).toLocaleString();
+});
