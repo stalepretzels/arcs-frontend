@@ -109,6 +109,10 @@ function ChangelogAbout() {
         <li><div class="changelogBadge lab">Labs Content</div> = Content that has moved from Canary to Release, but not finished yet.</li>
           <li><div class="changelogBadge bug">Bug Fix</div> = Used for bug fixes or patches.</li>
         </ul>
+        <br />
+      <a href="/about">
+        <em>Back to about page.</em>
+      </a>
   </>
 }
 

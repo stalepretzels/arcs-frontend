@@ -8,7 +8,7 @@ import {IconButton} from  '../components/Input/Input.jsx';
 
 function Chat() {
   useEffect(async () => {
-    let scriptsAsync = await addDependencyScriptsAsync(["./scripts/arrive.min.js"]);
+    let scriptsAsync = await addDependencyScriptsAsync(["./scripts/arrive.min.js", "./scripts/jquery.min.js", "./scripts/socket.io.min.js"]);
     let scripts = addDependencyScripts(["./scripts/chat.js"]);
 
     // Clean up the script when the component is unmounted
@@ -79,6 +79,15 @@ function Profile() {
 }
 
 function Edit() {
+  useEffect(async () => {
+    let scriptsAsync = await addDependencyScriptsAsync(["./scripts/jquery.min.js", "./scripts/chance.min.js"]);
+    return () => {
+      scriptsAsync.forEach((script)=>{
+        document.body.removeChild(script);
+      })
+    };
+  }, []);
+
   function handleFormSubmit(event) {
     event.preventDefault();
     let username = $("#usernameInput").val();
