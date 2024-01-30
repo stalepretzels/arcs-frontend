@@ -42,7 +42,11 @@ function Chat() {
 
 function MessageContainer() {
   return (
-    <div id="appendto" className="chatContainer"></div>
+    <div id="appendto" className="chatContainer">
+      <div className="statusBar">
+        Test of status bar in chatContainer
+      </div>
+      </div>
   );
 }
 

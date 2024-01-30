@@ -53,3 +53,11 @@
 .mainContainer {
   height: 85vh;
 }
+
+.statusBar {
+  background-color: var(--accent); 
+  color: var(--txtclr);
+  width: 100%;
+  height: 15px;
+  align-self: flex-end;
+}
