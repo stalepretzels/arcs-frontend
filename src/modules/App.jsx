@@ -78,32 +78,35 @@ function Profile() {
   );
 }
 
+let handleFormSubmit = ()=>{}
+
 function Edit() {
-  useEffect(() => {
-    let scripts = addDependencyScriptsDefer(["./scripts/jquery.min.js", "./scripts/chance.min.js"]);
+  useEffect(async () => {
+    let scripts = await addDependencyScriptsAsync(["./scripts/jquery.min.js", "./scripts/chance.min.js"]);
+
+    handleFormSubmit = (event) => {
+      event.preventDefault();
+      let username = $("#usernameInput").val();
+      let bio = $("#bioInput").val();
+      let user = JSON.parse(localStorage.getItem("user")) || {};
+      let uuid = user.uuid || chance.guid();
+      let useridentifier = user.ugn || chance.integer({ min: 1000, max: 9999 });
+      let UserModel = {
+        disName: username,
+        uuid: uuid,
+        ugn: useridentifier,
+        bio: bio,
+      };
+      localStorage.setItem("user", JSON.stringify(UserModel));
+      window.location = "/chat";
+    }
+
     return () => {
       scripts.forEach((script)=>{
         document.body.removeChild(script);
       })
     };
   }, []);
-
-  function handleFormSubmit(event) {
-    event.preventDefault();
-    let username = $("#usernameInput").val();
-    let bio = $("#bioInput").val();
-    let user = JSON.parse(localStorage.getItem("user")) || {};
-    let uuid = user.uuid || chance.guid();
-    let useridentifier = user.ugn || chance.integer({ min: 1000, max: 9999 });
-    let UserModel = {
-      disName: username,
-      uuid: uuid,
-      ugn: useridentifier,
-      bio: bio,
-    };
-    localStorage.setItem("user", JSON.stringify(UserModel));
-    window.location = "/chat";
-  }
 
   return (
     <>
