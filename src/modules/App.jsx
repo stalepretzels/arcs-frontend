@@ -81,8 +81,8 @@ function Profile() {
 let handleFormSubmit = ()=>{}
 
 function Edit() {
-  useEffect(async () => {
-    let scripts = await addDependencyScriptsAsync(["./scripts/chance.min.js", "./scripts/jquery.min.js"]);
+  useEffect(() => {
+    let scripts = addDependencyScripts(["./scripts/chance.min.js", "./scripts/jquery.min.js"]);
 
     handleFormSubmit = (event) => {
       event.preventDefault();
