@@ -86,7 +86,6 @@ function Edit() {
 
     handleFormSubmit = (event) => {
       event.preventDefault();
-      window.alert("ran correct function")
       let username = document.getElementById("usernameInput").value;
       let bio = document.getElementById("bioInput").value;
       let user = JSON.parse(localStorage.getItem("user")) || {};
