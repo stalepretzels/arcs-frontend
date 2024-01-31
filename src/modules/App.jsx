@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { addDependencyScripts, addDependencyScriptsAsync } from "../utility.js";
+import { addDependencyScripts, addDependencyScriptsAsync, addDependencyScriptsDefer } from "../utility.js";
 
 import './App.css';
 import './Message.css';
