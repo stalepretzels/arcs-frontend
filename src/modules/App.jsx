@@ -86,6 +86,7 @@ function Edit() {
 
     handleFormSubmit = (event) => {
       event.preventDefault();
+      window.alert("ran correct function")
       let username = $("#usernameInput").val();
       let bio = $("#bioInput").val();
       let user = JSON.parse(localStorage.getItem("user")) || {};
