@@ -82,13 +82,13 @@ let handleFormSubmit = ()=>{}
 
 function Edit() {
   useEffect(async () => {
-    let scripts = await addDependencyScripts(["./scripts/jquery.min.js", "./scripts/chance.min.js"]);
+    let scripts = await addDependencyScripts(["./scripts/chance.min.js"]);
 
     handleFormSubmit = (event) => {
       event.preventDefault();
       window.alert("ran correct function")
-      let username = $("#usernameInput").val();
-      let bio = $("#bioInput").val();
+      let username = document.getElementById("usernameInput").value;
+      let bio = document.getElementById("bioInput").value;
       let user = JSON.parse(localStorage.getItem("user")) || {};
       let uuid = user.uuid || chance.guid();
       let useridentifier = user.ugn || chance.integer({ min: 1000, max: 9999 });
