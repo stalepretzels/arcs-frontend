@@ -82,7 +82,7 @@ let handleFormSubmit = ()=>{}
 
 function Edit() {
   useEffect(async () => {
-    let scripts = await addDependencyScriptsAsync(["./scripts/jquery.min.js", "./scripts/chance.min.js"]);
+    let scripts = await addDependencyScripts(["./scripts/jquery.min.js", "./scripts/chance.min.js"]);
 
     handleFormSubmit = (event) => {
       event.preventDefault();
