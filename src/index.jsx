@@ -67,7 +67,7 @@ root.render(
     <main className="mainContainer">
       <header className="titleContainer">
         <h1>
-          Arcs <span style={{ fontWeight: 200 }}>Slate</span>&nbsp;
+          Arcs <span style={{ fontWeight: 200 }}>{__APP_VERSION_HANDLE__}</span>&nbsp;
           <span style={{ fontWeight: 300, fontSize: "15px" }}>
             {__APP_VERSION__}
           </span>
