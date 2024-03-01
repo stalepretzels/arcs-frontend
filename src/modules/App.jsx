@@ -78,10 +78,8 @@ function Profile() {
   );
 }
 
-let handleFormSubmit = ()=>{}
-
 function Edit() {
-  useEffect(() => {
+  //useEffect(() => {
     //let scripts = addDependencyScripts(["./scripts/chance.min.js"]);
 
     handleFormSubmit = (event) => {
@@ -101,12 +99,12 @@ function Edit() {
       window.location = "/chat";
     }
 
-    return () => {
+    //return () => {
       //scripts.forEach((script)=>{
         //document.body.removeChild(script);
       //})
-    };
-  }, []);
+    //};
+  //}, []);
 
   return (
     <>
