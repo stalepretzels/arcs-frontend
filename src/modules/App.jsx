@@ -82,7 +82,7 @@ let handleFormSubmit = ()=>{}
 
 function Edit() {
   useEffect(() => {
-    let scripts = addDependencyScripts(["./scripts/chance.min.js"]);
+    //let scripts = addDependencyScripts(["./scripts/chance.min.js"]);
 
     handleFormSubmit = (event) => {
       event.preventDefault();
@@ -102,9 +102,9 @@ function Edit() {
     }
 
     return () => {
-      scripts.forEach((script)=>{
-        document.body.removeChild(script);
-      })
+      //scripts.forEach((script)=>{
+        //document.body.removeChild(script);
+      //})
     };
   }, []);
 
