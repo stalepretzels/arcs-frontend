@@ -82,7 +82,7 @@ function Edit() {
   //useEffect(() => {
     //let scripts = addDependencyScripts(["./scripts/chance.min.js"]);
 
-    handleFormSubmit = (event) => {
+    function handleFormSubmit(event) {
       event.preventDefault();
       let username = document.getElementById("usernameInput").value;
       let bio = document.getElementById("bioInput").value;
