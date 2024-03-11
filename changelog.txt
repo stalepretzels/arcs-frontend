@@ -1,1 +1,2 @@
 Aquamarine has been delayed in favor of Dragonfly, to provide better performance and modularity to the chat system, as well as introduce pub/sub features not available in the previous model.;
+Add privatation notice.;
