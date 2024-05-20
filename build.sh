@@ -6,6 +6,7 @@ cd arcs-client
 
 ## install rust toolchain
 curl https://sh.rustup.rs -sSf | sh -s -- -y
+. "$HOME/.cargo/env"
 
 ## build with webpack
 npm i
