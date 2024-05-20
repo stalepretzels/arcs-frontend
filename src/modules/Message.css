@@ -10,6 +10,7 @@
 }
 
 pre {
+  display: inline-block;
   font-family: "Inter Tight", sans-serif;
   white-space: pre-wrap;
   margin: 0;

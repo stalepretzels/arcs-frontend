@@ -13,11 +13,11 @@ npm i
 npm run build
 
 ## copy build
-mkdir ../src/client
-mv dist/* ../src/client
+mkdir ../public/client
+mv pkg/* ../public/client
 
 # (debug) list files
-cd ../src/client
+cd ../public/client
 ls
 cd ../../
 

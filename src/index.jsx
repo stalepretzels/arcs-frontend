@@ -5,8 +5,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Sidebar } from "./modules/Sidebar.jsx";
 import { Chat, Intro, Profile, Edit } from "./modules/App.jsx";
 import { About, Rules, ChangelogAbout } from "./modules/Extras.jsx";
-import { ErrorComp } from "./modules/Error.jsx"
-import './index.css'
+import { ErrorComp } from "./modules/Error.jsx";
+import "./index.css";
 
 window.onerror = (e, s, l, c, err) => {
   window.alert(`${s} at ${l}:${c}; ${err}`);
@@ -40,7 +40,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/about/chnlogfaq",
-    element: <ChangelogAbout />
+    element: <ChangelogAbout />,
   },
   {
     path: "*", // Catch-all route used for errors
@@ -67,7 +67,8 @@ root.render(
     <main className="mainContainer">
       <header className="titleContainer">
         <h1>
-          Arcs <span style={{ fontWeight: 200 }}>{__APP_VERSION_HANDLE__}</span>&nbsp;
+          Arcs <span style={{ fontWeight: 200 }}>{__APP_VERSION_HANDLE__}</span>
+          &nbsp;
           <span style={{ fontWeight: 300, fontSize: "15px" }}>
             {__APP_VERSION__}
           </span>
