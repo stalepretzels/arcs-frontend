@@ -8,8 +8,8 @@ cd arcs-client
 curl https://sh.rustup.rs -sSf | sh -s -- -y
 
 ## build with webpack
-pnpm i
-pnpm run build
+npm i
+npm run build
 
 ## copy build
 mkdir ../src/client
@@ -21,5 +21,4 @@ ls
 cd ../../
 
 # build frontend
-pnpm i vite -g 
-vite build
+npm run build
