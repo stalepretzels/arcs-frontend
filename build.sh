@@ -17,4 +17,5 @@ mkdir ../src/client
 mv pkg/* ../src/client
 
 # build frontend
+cd ../
 npm run build
