@@ -13,13 +13,8 @@ npm i
 npm run build
 
 ## copy build
-mkdir ../public/client
-mv pkg/* ../public/client
-
-# (debug) list files
-cd ../public/client
-ls
-cd ../../
+mkdir ../src/client
+mv pkg/* ../src/client
 
 # build frontend
 npm run build

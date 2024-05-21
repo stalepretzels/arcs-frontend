@@ -1,3 +1,18 @@
+let loggedIn;
+let alreadyConnected = false;
+let room = "::GENERAL";
+
+if (localStorage.getItem("readrules") == undefined) {
+  window.location = "/rules";
+}
+
+let User;
+if (localStorage.getItem("user") == undefined) {
+  window.location = "/profile/edit";
+} else {
+  User = JSON.parse(localStorage.getItem("user"));
+}
+
 // Call this shit FedEx
 class MailSystemClass {
   constructor() {
@@ -82,10 +97,7 @@ class MailboxClass extends MailSystemClass {
   }
 
   sendNotif(pkg) {
-    if (
-      Notification.permission == "granted" &&
-      !JSON.parse(localStorage.getItem("notifMuted"))
-    ) {
+    if (Notification.permission == "granted" && !JSON.parse(localStorage.getItem("notifMuted"))) {
       if (!document.hasFocus()) {
         new Notification(pkg.user.disName + "@" + pkg.user.ugn, {
           body: pkg.message,
@@ -94,6 +106,68 @@ class MailboxClass extends MailSystemClass {
     }
   }
 }
+
+const socket = io("https://callmeclover.serv00.net");
+const MailSystem = new MailSystemClass();
+const Mailbox = new MailboxClass();
+let Mailman;
+
+socket.on("connect", function (data) {
+  if (!alreadyConnected) {
+    Mailman = new MailmanClass("join", "", User, room);
+    if (!(User.disName == undefined)) {
+      Mailman.send();
+      alreadyConnected = !alreadyConnected;
+    }
+  }
+});
+
+document.getElementById("chatSubmit").onclick = function (e) {
+  e.preventDefault();
+
+  let message = $("#chatInput").val();
+
+  if (!message.replace(/\s/g, "").length) {
+    /* empty */
+  } else {
+    document.getElementById("chatInput").value = "";
+
+    Mailman = new MailmanClass("message", message, User, room);
+    Mailman.send();
+  }
+};
+
+$("#chatInput").keypress(function (e) {
+  if (e.key === "Enter" && !e.shiftKey) {
+    e.preventDefault();
+
+    let message = $("#chatInput").val();
+
+    if (!message.replace(/\s/g, "").length) {
+      /* empty */
+    } else {
+      document.getElementById("chatInput").value = "";
+
+      Mailman = new MailmanClass("message", message, User, room);
+      Mailman.send();
+    }
+  }
+});
+
+document.addEventListener("keypress", (e)=>{
+  if (e.key === "\\" && !e.shiftKey && !(document.getElementById("chatInput") === document.activeElement)) {
+    e.preventDefault();
+    document.getElementById("chatInput").focus();
+  }
+})
+
+socket.on("broad", function (data) {
+  Mailbox.append(data);
+});
+
+socket.on("notification", function (data) {
+  Mailbox.sendNotif(data);
+});
 
 function joinRoomLogic(rtj) {
   if (room == rtj) {
@@ -105,4 +179,6 @@ function joinRoomLogic(rtj) {
   }
 }
 
-export { MailSystemClass, MailmanClass, MailboxClass };
+document.arrive("time", function(elem) {
+  elem.innerHTML = new Date(elem.getAttribute("datetime")).toLocaleString();
+});
