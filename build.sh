@@ -13,9 +13,11 @@ npm i
 npm run build
 
 ## copy build
+rm -rf ../src/client
 mkdir ../src/client
 mv pkg/* ../src/client
 
 # build frontend
 cd ../
+npm i
 npm run build

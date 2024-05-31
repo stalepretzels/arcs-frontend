@@ -22,6 +22,10 @@ const router = createBrowserRouter([
     element: <Chat />,
   },
   {
+    path: "/talk",
+    element: <Chat />,
+  },
+  {
     path: "/profile/:user",
     action: ({ params }) => {},
     element: <Profile />,
